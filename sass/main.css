@@ -1,0 +1,70 @@
+.slide {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: sans-serif;
+}
+
+.slide .slide__text--container .slide__text--paragraph {
+  font-family: "Baskerville";
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.color-black {
+  background-color: #080708;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Baskerville";
+  src: url("assets/font/LibreBaskerville-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Baskerville";
+  src: url("assets/font/LibreBaskerville-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Baskerville";
+  src: url("assets/font/LibreBaskerville-Italic.ttf");
+  font-style: italic;
+  font-weight: 400;
+}
+
+p {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  font-size: 2em;
+  -webkit-animation: appear 2.5s 1s steps(60, end);
+          animation: appear 2.5s 1s steps(60, end);
+}
+
+@-webkit-keyframes appear {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes appear {
+  from {
+    width: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */

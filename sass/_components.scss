@@ -1,0 +1,24 @@
+// Imports
+@import "colors";
+// Components
+
+// slides
+.slide {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+
+    .slide__text--container {
+        .slide__text--paragraph {
+            font-family: "Baskerville";
+            font-weight: bold;
+            font-size: 3em;
+        }
+    }
+}
+// classes for slide background
+.color-black {
+    background-color: $color-black;
+}

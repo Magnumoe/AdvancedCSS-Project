@@ -15,10 +15,10 @@
             font-family: "Baskerville";
             font-weight: bold;
             font-size: 3em;
+            width: auto;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typist 2.5s steps(180) infinite; // 1 normal instead of infinite
         }
     }
-}
-// classes for slide background
-.color-black {
-    background-color: $color-black;
 }

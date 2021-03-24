@@ -18,16 +18,3 @@
     font-style: italic;
     font-weight: 400;
 }
-
-p {
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%;
-    font-size: 2em;
-    animation: appear 2.5s 1s steps(60, end);
-}
-@keyframes appear {
-    from {
-        width: 0;
-    }
-}

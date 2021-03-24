@@ -1,3 +1,25 @@
+@-webkit-keyframes typist {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typist {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/*@mixin typist($str) {
+    
+}
+*/
 .slide {
   min-height: 100vh;
   display: -webkit-box;
@@ -15,10 +37,11 @@
   font-family: "Baskerville";
   font-weight: bold;
   font-size: 3em;
-}
-
-.color-black {
-  background-color: #080708;
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-animation: typist 2.5s steps(180) infinite;
+          animation: typist 2.5s steps(180) infinite;
 }
 
 * {
@@ -45,26 +68,5 @@
   src: url("assets/font/LibreBaskerville-Italic.ttf");
   font-style: italic;
   font-weight: 400;
-}
-
-p {
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
-  font-size: 2em;
-  -webkit-animation: appear 2.5s 1s steps(60, end);
-          animation: appear 2.5s 1s steps(60, end);
-}
-
-@-webkit-keyframes appear {
-  from {
-    width: 0;
-  }
-}
-
-@keyframes appear {
-  from {
-    width: 0;
-  }
 }
 /*# sourceMappingURL=main.css.map */

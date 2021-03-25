@@ -4,3 +4,26 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    transition: ease-in-out 0.7s;
+}
+
+.color-black {
+    background-color: #111111;
+    color: #fff;
+}
+
+.color-light-blue {
+    background-color: #87cefa;
+    color: #111111;
+}
+.color-summer-green {
+    background-color: #58bc82;
+}
+.color-autumn {
+    background-color: #f96f09;
+}
+.color-winter {
+    background-color: #d6fffb;
+}

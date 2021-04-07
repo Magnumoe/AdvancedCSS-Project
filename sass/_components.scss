@@ -9,6 +9,10 @@
     justify-content: space-around;
     align-items: center;
     font-family: sans-serif;
+    position: relative;
+    border-bottom: 3px solid black;
+    //scroll-snap-align: start;
+    //scroll-snap-stop: normal;
 
     .slide__text--container {
         .slide__text--paragraph {
@@ -18,7 +22,8 @@
             width: auto;
             overflow: hidden;
             white-space: nowrap;
-            animation: typist 2.5s steps(180) infinite; // 1 normal instead of infinite
+            opacity: 0;
+            //animation: typist 3s steps(180) 1 normal; // 1 normal instead of infinite
         }
     }
 }

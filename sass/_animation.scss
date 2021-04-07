@@ -1,15 +1,16 @@
 // Animation
-@keyframes typist {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
 
 // mixin  for text animation if needed
 /*@mixin typist($str) {
     
 }
 */
+
+@keyframes opacityFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,25 +1,24 @@
-@-webkit-keyframes typist {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typist {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
 /*@mixin typist($str) {
     
 }
 */
+@-webkit-keyframes opacityFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacityFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .slide {
   min-height: 100vh;
   display: -webkit-box;
@@ -31,6 +30,8 @@
       -ms-flex-align: center;
           align-items: center;
   font-family: sans-serif;
+  position: relative;
+  border-bottom: 3px solid black;
 }
 
 .slide .slide__text--container .slide__text--paragraph {
@@ -40,8 +41,7 @@
   width: auto;
   overflow: hidden;
   white-space: nowrap;
-  -webkit-animation: typist 2.5s steps(180) infinite;
-          animation: typist 2.5s steps(180) infinite;
+  opacity: 0;
 }
 
 * {
@@ -54,6 +54,12 @@
 body {
   -webkit-transition: ease-in-out 0.7s;
   transition: ease-in-out 0.7s;
+  scroll-behavior: smooth;
+}
+
+main {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
 }
 
 .color-black {
@@ -76,6 +82,65 @@ body {
 
 .color-winter {
   background-color: #d6fffb;
+}
+
+.animation-typist {
+  -webkit-animation: typist 2.5s steps(180) 1 normal;
+          animation: typist 2.5s steps(180) 1 normal;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.nextSection {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  text-decoration: none;
+  color: #111111;
+  display: block;
+}
+
+#slide2 .nextSection {
+  color: #d6fffb;
+}
+
+.fa-angle-double-down {
+  padding: 25px;
+  font-size: 2.3em;
+}
+
+.fa-angle-double-down:hover {
+  cursor: pointer;
+}
+
+@-webkit-keyframes typist {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    width: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes typist {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    width: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
 }
 
 @font-face {

@@ -7,8 +7,11 @@
 
 body {
     transition: ease-in-out 0.7s;
+    scroll-behavior: smooth;
 }
-
+main {
+    scroll-snap-type: y mandatory;
+}
 .color-black {
     background-color: #111111;
     color: #fff;
@@ -26,4 +29,41 @@ body {
 }
 .color-winter {
     background-color: #d6fffb;
+}
+.animation-typist {
+    animation: typist 2.5s steps(180) 1 normal;
+    animation-fill-mode: both;
+}
+.nextSection {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    text-decoration: none;
+    color: #111111;
+    display: block;
+}
+#slide2 .nextSection {
+    color: #d6fffb;
+}
+.fa-angle-double-down {
+    padding: 25px;
+    font-size: 2.3em;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@keyframes typist {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        width: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
 }

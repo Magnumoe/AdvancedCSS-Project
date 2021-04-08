@@ -46,12 +46,17 @@ main {
     color: #d6fffb;
 }
 .fa-angle-double-down {
-    padding: 25px;
+    padding: 20px;
     font-size: 2.3em;
     &:hover {
         cursor: pointer;
     }
 }
+
+.fa-angle-double-down:active{
+    font-size: 2.4em;
+}
+
 
 @keyframes typist {
     0% {

@@ -10,7 +10,7 @@
     align-items: center;
     font-family: sans-serif;
     position: relative;
-    border-bottom: 3px solid black;
+    margin: auto;
     //scroll-snap-align: start;
     //scroll-snap-stop: normal;
 
@@ -25,5 +25,42 @@
             opacity: 0;
             //animation: typist 3s steps(180) 1 normal; // 1 normal instead of infinite
         }
+    }
+}
+
+.zoom{
+    animation: zoomEffect 2.5s forwards;
+}
+.fade{
+    animation: fade 6s forwards;
+}
+
+@keyframes zoomEffect {
+    0% {
+        width: 100%;
+        opacity: 1;
+    }
+    50% {
+        width: 50%;
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+
+    70%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

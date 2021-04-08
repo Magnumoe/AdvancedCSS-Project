@@ -39,8 +39,16 @@ $(window).scroll(function() {
 $(document).ready(function(){
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
+
+    //Preventing fast clicking
+    $('a').each(function (){
+        this.style.pointerEvents = 'none'; 
+    });
+
     var fadeTarget = $('.fa-angle-double-down');
-    fadeTarget.css('visibility', 'hidden');
+    $('.slide').addClass('zoom');
+    $(fadeTarget).addClass('fade');
+    
 
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
@@ -52,17 +60,26 @@ $(document).ready(function(){
 
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
+      setTimeout(function(){
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+       
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+      },800)
+      
     } // End if
     setTimeout(function() {
-      fadeTarget.css('visibility', 'visible');
-
-    }, 4000);
+      $('.slide').removeClass('zoom');
+      setTimeout(function(){
+        $(fadeTarget).removeClass('fade');
+        //Re-enable arrow click
+        $('a').each(function (){
+            this.style.pointerEvents = 'auto';
+        }); 
+      },2500);
+    }, 3000);
   });
 });

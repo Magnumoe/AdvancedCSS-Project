@@ -31,7 +31,7 @@
           align-items: center;
   font-family: sans-serif;
   position: relative;
-  border-bottom: 3px solid black;
+  margin: auto;
 }
 
 .slide .slide__text--container .slide__text--paragraph {
@@ -42,6 +42,76 @@
   overflow: hidden;
   white-space: nowrap;
   opacity: 0;
+}
+
+.zoom {
+  -webkit-animation: zoomEffect 2.5s forwards;
+          animation: zoomEffect 2.5s forwards;
+}
+
+.fade {
+  -webkit-animation: fade 6s forwards;
+          animation: fade 6s forwards;
+}
+
+@-webkit-keyframes zoomEffect {
+  0% {
+    width: 100%;
+    opacity: 1;
+  }
+  50% {
+    width: 50%;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes zoomEffect {
+  0% {
+    width: 100%;
+    opacity: 1;
+  }
+  50% {
+    width: 50%;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 * {
@@ -105,12 +175,16 @@ main {
 }
 
 .fa-angle-double-down {
-  padding: 25px;
+  padding: 20px;
   font-size: 2.3em;
 }
 
 .fa-angle-double-down:hover {
   cursor: pointer;
+}
+
+.fa-angle-double-down:active {
+  font-size: 2.4em;
 }
 
 @-webkit-keyframes typist {

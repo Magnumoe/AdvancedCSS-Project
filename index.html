@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -10,12 +11,321 @@
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/68e6b9a7cd.js" crossorigin="anonymous"></script>
     <!--jQuery import-->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     <script defer src='main.js'></script>
+    <style>
+        .progress {
+            height: 10px;
+            width: 0%;
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            animation: progress 1s linear;
+        }
+
+        @keyframes progress {
+            0% {
+                background-color: rgb(0, 0, 0);
+                width: 0%;
+            }
+
+            5% {
+                background-color: rgb(0, 0, 0);
+            }
+
+            10% {
+                background-color: rgb(255, 255, 255);
+            }
+
+            15% {
+                background-color: #F95A7E
+            }
+
+            20% {
+                background-color: rgb(255, 255, 255);
+            }
+
+            25% {
+                background-color: #b0fd91;
+            }
+
+            30% {
+                background-color: rgb(255, 188, 112);
+            }
+
+            35% {
+                background-color: rgb(87, 111, 112);
+            }
+
+            40% {
+                background-color: rgb(157, 240, 255);
+            }
+
+            45% {
+                background-color: #d1d1d1;
+            }
+
+            50% {
+                background-color: rgb(0, 0, 0);
+            }
+
+            55% {
+                background-color: rgb(0, 0, 0);
+            }
+
+            60% {
+                background-color: rgb(0, 0, 0);
+            }
+
+            65% {
+                background-color: #533802;
+            }
+
+            70% {
+                background-color: rgb(255, 255, 255);
+            }
+
+            75% {
+                background-color: rgb(0, 0, 0);
+            }
+
+            80% {
+                background-color: rgb(0, 0, 0);
+            }
+
+            85% {
+                background-color: rgb(0, 0, 0);
+            }
+
+            90% {
+                background-color: rgb(0, 0, 0);
+            }
+
+            95% {
+                background-color: rgb(20, 255, 226);
+            }
+
+            100% {
+                background-color: rgb(116, 22, 119);
+                width: 100%;
+            }
+        }
+
+        .progress {
+            /* Pause the animation */
+            animation-play-state: paused;
+            /* Bind the animation to scroll */
+            animation-delay: calc(var(--scroll) * -1s);
+            /* These last 2 properites clean up overshoot weirdness */
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+        }
+
+
+        #t1 {
+            width: 175px;
+            height: 0px;
+            position: fixed;
+            background-color: rgb(168, 102, 2);
+            bottom: 5%;
+            left: 45.5%;
+            background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(209, 131, 14), rgb(168, 102, 2));
+        }
+
+        .t1 {
+            animation: growT 3s linear forwards;
+            animation-iteration-count: 1;
+        }
+
+        .treeGone {
+            display: none;
+        }
+
+        #b1,
+        #b2,
+        #b3,
+        #b4,
+        #b5,
+        #b6 {
+            width: 0px;
+            height: 50px;
+            position: fixed;
+            background-color: rgb(168, 102, 2);
+            bottom: 33%;
+            left: 46.5%;
+            transform: rotate(215deg);
+            transform-origin: left;
+            background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(177, 106, 0), rgb(168, 102, 2));
+        }
+
+        .b1,
+        .b2,
+        .b3,
+        .b4 {
+            animation: growB 2s linear forwards;
+            animation-iteration-count: 1;
+            animation-delay: 2.5s;
+        }
+
+        .g1,
+        .g2,
+        .g5,
+        .g6 {
+            animation: growG 2s linear forwards;
+            animation-iteration-count: 1;
+            animation-delay: 4s;
+        }
+
+        .g3,
+        .g4 {
+            animation: growGG 2s linear forwards;
+            animation-iteration-count: 1;
+            animation-delay: 4s;
+        }
+
+        .b5,
+        .b6 {
+            animation: growBT 1s linear forwards;
+            animation-iteration-count: 1;
+            animation-delay: 2.8s;
+        }
+
+        #g1,
+        #g2,
+        #g3,
+        #g4,
+        #g5,
+        #g6 {
+            width: 0px;
+            height: 0px;
+            position: fixed;
+            background-color: rgb(6, 202, 23);
+            bottom: 47%;
+            left: 34%;
+            border-radius: 50%;
+            background-image: linear-gradient(rgb(6, 202, 23), rgb(4, 136, 15));
+        }
+
+        #g2 {
+            bottom: 47%;
+            left: 61%;
+        }
+
+        /* stor */
+        #g3 {
+            bottom: 82%;
+            left: 41%;
+        }
+
+        /* stor */
+        #g4 {
+            bottom: 82%;
+            left: 53%;
+        }
+
+        #g5 {
+            bottom: 64%;
+            left: 60%;
+        }
+
+        #g6 {
+            bottom: 64%;
+            left: 35%;
+        }
+
+        #b2 {
+            transform: rotate(-35deg);
+            bottom: 33%;
+            left: 53.9%;
+        }
+
+        #b3 {
+            transform: rotate(-45deg);
+            bottom: 47%;
+            left: 53.5%;
+        }
+
+        #b4 {
+            transform: rotate(225deg);
+            bottom: 47%;
+            left: 46.5%;
+        }
+
+        #b5 {
+            height: 90px;
+            transform: rotate(245deg);
+            bottom: 61%;
+            left: 48%;
+            background-image: linear-gradient(to bottom left, rgb(168, 102, 2), rgb(209, 131, 14));
+            border-radius: 8px 10px 10px 8px;
+        }
+
+        #b6 {
+            height: 100px;
+            transform: rotate(-65deg);
+            bottom: 60.5%;
+            left: 52%;
+            background-image: linear-gradient(to top left, rgb(168, 102, 2), rgb(209, 131, 14));
+            border-radius: 20px 10px 10px 8px;
+        }
+
+        @keyframes growT {
+            to {
+                height: 600px;
+            }
+        }
+
+        @keyframes growB {
+            to {
+                width: 250px;
+            }
+        }
+
+        @keyframes growBT {
+            to {
+                width: 225px;
+            }
+        }
+
+        @keyframes growG {
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(2);
+                width: 115px;
+                height: 115px;
+            }
+        }
+
+        @keyframes growGG {
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(3);
+                width: 115px;
+                height: 115px;
+            }
+        }
+    </style>
+    <script>
+        window.addEventListener('scroll', () => {
+            document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight -
+                window.innerHeight));
+        }, false);
+    </script>
 </head>
+
 <body>
     <main>
+        <div class="progress"></div>
+
         <section class="slide" id="landingPage" data-color="normal">
             <div class="slide__text--container">
                 <h1>Favorite Color</h1>
@@ -23,33 +333,56 @@
             </div>
             <a class="nextSection" href="#slide1"><i class="fas fa-angle-double-down visible"></i></a>
         </section>
-        <section class="slide" id="slide1" data-color="normal"  data-animation="typist">
+        <section class="slide" id="slide1" data-color="normal" data-animation="typist">
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">I met a child a year ago</p>
             </div>
             <a class="nextSection" href="#slide2"><i class="fas fa-angle-double-down visible"></i></a>
         </section>
-        <section class="slide" id="slide2" data-color="black"  data-animation="typist">
+        <section class="slide" id="slide2" data-color="black" data-animation="typist">
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">Whose eyes would never see.</p>
             </div>
-            <a class="nextSection" onclick="setSmileAnimation()" href="#slide3"><i class="fas fa-angle-double-down"></i></a>
+            <a class="nextSection" onclick="setSmileAnimation()" href="#slide3"><i
+                    class="fas fa-angle-double-down"></i></a>
         </section>
         <section class="slide" id="slide3" data-color="normal" data-animation="typist">
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">She asked me with a timid smile,</p>
                 <img id="girl-image" src="./assets/images/girl.png" alt="girl drawing">
                 <svg id="girl-smile" viewBox="0 0 43.8 11.4">
-                    <path id="girl-smile__path" d="M18.4,4.7c0,0,1.1,1.7,3.6,1.7c2.1,0,3.4-1.7,3.4-1.7"/>
+                    <path id="girl-smile__path" d="M18.4,4.7c0,0,1.1,1.7,3.6,1.7c2.1,0,3.4-1.7,3.4-1.7" />
                 </svg>
             </div>
-            <a class="nextSection" href="#slide4"><i class="fas fa-angle-double-down"></i></a>
+            <a class="nextSection" href="#slide4" onclick="tree()"><i class="fas fa-angle-double-down"></i></a>
         </section>
         <section class="slide" id="slide4" data-color="normal" data-animation="typist">
             <div class="slide__text--container">
+                <div class="groupTree">
+                    <div id="t1"></div>
+                    <div id="t2"></div>
+                    <div id="t3"></div>
+                    <div id="t4"></div>
+                    <div id="t5"></div>
+                    <div id="t6"></div>
+                    <div id="t7"></div>
+                    <div id="b1"></div>
+                    <div id="b2"></div>
+                    <div id="b3"></div>
+                    <div id="b4"></div>
+                    <div id="b5"></div>
+                    <div id="b6"></div>
+                    <div id="g1"></div>
+                    <div id="g2"></div>
+                    <div id="g3"></div>
+                    <div id="g4"></div>
+                    <div id="g5"></div>
+                    <div id="g6"></div>
+                </div>
                 <p class="slide__text--paragraph">What colour is a tree?</p>
             </div>
-            <a class="nextSection" href="#slide5"><i class="fas fa-angle-double-down"></i></a>
+
+            <a class="nextSection" href="#slide5" onclick="treeGone()"><i class="fas fa-angle-double-down"></i></a>
         </section>
         <section class="slide" id="slide5" data-color="summer-green" data-animation="typist">
             <div class="slide__text--container">
@@ -149,4 +482,5 @@
     </main>
     <footer></footer>
 </body>
+
 </html>

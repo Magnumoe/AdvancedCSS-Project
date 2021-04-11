@@ -9,9 +9,11 @@ body {
     transition: ease-in-out 0.7s;
     scroll-behavior: smooth;
 }
+
 main {
     scroll-snap-type: y mandatory;
 }
+
 .color-black {
     background-color: #111111;
     color: #fff;
@@ -21,19 +23,24 @@ main {
     background-color: #87cefa;
     color: #111111;
 }
+
 .color-summer-green {
     background-color: #58bc82;
 }
+
 .color-autumn {
     background-color: #f96f09;
 }
+
 .color-winter {
     background-color: #d6fffb;
 }
+
 .animation-typist {
     animation: typist 2.5s steps(180) 1 normal;
     animation-fill-mode: both;
 }
+
 .nextSection {
     position: absolute;
     bottom: 0;
@@ -42,18 +49,21 @@ main {
     color: #111111;
     display: block;
 }
+
 #slide2 .nextSection {
     color: #d6fffb;
 }
+
 .fa-angle-double-down {
     padding: 20px;
     font-size: 2.3em;
+
     &:hover {
         cursor: pointer;
     }
 }
 
-.fa-angle-double-down:active{
+.fa-angle-double-down:active {
     font-size: 2.4em;
 }
 
@@ -63,10 +73,12 @@ main {
         width: 0;
         opacity: 0;
     }
+
     50% {
         opacity: 1;
         width: 0;
     }
+
     100% {
         width: 100%;
         opacity: 1;

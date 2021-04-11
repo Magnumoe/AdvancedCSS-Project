@@ -7,7 +7,9 @@
     <title>Favourite Color</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='sass/main.css'>
-
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/68e6b9a7cd.js" crossorigin="anonymous"></script>
     <!--jQuery import-->
@@ -346,13 +348,15 @@
             <a class="nextSection" onclick="setSmileAnimation()" href="#slide3"><i
                     class="fas fa-angle-double-down"></i></a>
         </section>
-        <section class="slide" id="slide3" data-color="normal" data-animation="typist">
+        <section class="slide" id="slide3" data-color="pastel-pink" data-animation="typist">
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">She asked me with a timid smile,</p>
+
                 <img id="girl-image" src="./assets/images/girl.png" alt="girl drawing">
                 <svg id="girl-smile" viewBox="0 0 43.8 11.4">
                     <path id="girl-smile__path" d="M18.4,4.7c0,0,1.1,1.7,3.6,1.7c2.1,0,3.4-1.7,3.4-1.7" />
                 </svg>
+
             </div>
             <a class="nextSection" href="#slide4" onclick="tree()"><i class="fas fa-angle-double-down"></i></a>
         </section>
@@ -414,7 +418,7 @@
             </div>
             <a class="nextSection" href="#slide10"><i class="fas fa-angle-double-down"></i></a>
         </section>
-        <section class="slide" id="slide10" data-color="normal" data-animation="typist">
+        <section class="slide" id="slide10" data-color="loblolly" data-animation="typist">
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">"And silver is the sand;</p>
             </div>
@@ -430,29 +434,65 @@
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">What colour is a man?"</p>
             </div>
-            <a class="nextSection" href="#slide13"><i class="fas fa-angle-double-down"></i></a>
+            <a class="nextSection" href="#slide13" onclick="WhiteHandAnimation()"><i class="fas fa-angle-double-down"></i></a>
         </section>
         <section class="slide" id="slide13" data-color="normal" data-animation="typist">
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">"Man is many colours child:</p>
+                
+                <div id="float">
+                    <img src="assets/images/handwhite.png" height="100px" width="100px">
+                </div>
+
+                <div id="apple">
+                    <img src="assets/images/Small-Apple-Fruit-Vector-Transparent-PNG.png" height="100px" width="100px">
+                </div>
+                
+
             </div>
             <a class="nextSection" href="#slide14"><i class="fas fa-angle-double-down"></i></a>
         </section>
-        <section class="slide" id="slide14" data-color="normal" data-animation="typist">
+        <section class="slide" id="slide14" data-color="yellow-brown-gradient" data-animation="typist">
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">Some are yellow, some are brown.</p>
+
+                <div id="float">
+                    <img src="assets/images/HandMexican.png" height="100px" width="100px">
+                </div>
+
+                <div id="apple">
+                    <img src="assets/images/Small-Apple-Fruit-Vector-Transparent-PNG.png" height="100px" width="100px">
+                </div>
+
             </div>
             <a class="nextSection" href="#slide15"><i class="fas fa-angle-double-down"></i></a>
         </section>
-        <section class="slide" id="slide15" data-color="normal" data-animation="typist">
+        <section class="slide" id="slide15" data-color="black" data-animation="typist">
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">And some are black as sightlessness,</p>
+
+                <div id="float">
+                    <img src="assets/images/Handblack.png" height="100px" width="100px">
+                </div>
+
+                <div id="apple">
+                    <img src="assets/images/Small-Apple-Fruit-Vector-Transparent-PNG.png" height="100px" width="100px">
+                </div>
+
             </div>
             <a class="nextSection" href="#slide16"><i class="fas fa-angle-double-down"></i></a>
         </section>
         <section class="slide" id="slide16" data-color="normal" data-animation="typist">
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">Some white as eiderdowmn."</p>
+
+                <div id="float">
+                    <img src="assets/images/HandBright.png" height="100px" width="100px">
+                </div>
+                <div id="apple">
+                    <img src="assets/images/Small-Apple-Fruit-Vector-Transparent-PNG.png" height="100px" width="100px">
+                </div>
+
             </div>
             <a class="nextSection" href="#slide17"><i class="fas fa-angle-double-down"></i></a>
         </section>
@@ -474,13 +514,12 @@
             </div>
             <a class="nextSection" href="#slide20"><i class="fas fa-angle-double-down"></i></a>
         </section>
-        <section class="slide" id="slide20" data-color="normal" data-animation="typist">
+        <section class="slide" id="slide20" data-color="pastel-pink" data-animation="typist">
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">Comes my favourite colour--love."</p>
             </div>
         </section>
     </main>
-    <footer></footer>
 </body>
 
 </html>

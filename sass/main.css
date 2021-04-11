@@ -1,7 +1,3 @@
-/*@mixin typist($str) {
-    
-}
-*/
 @-webkit-keyframes opacityFade {
   0% {
     opacity: 0;
@@ -10,6 +6,7 @@
     opacity: 1;
   }
 }
+
 @keyframes opacityFade {
   0% {
     opacity: 0;
@@ -17,75 +14,6 @@
   100% {
     opacity: 1;
   }
-}
-
-.slide {
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: sans-serif;
-  position: relative;
-  margin: auto;
-}
-
-.slide .slide__text--container .slide__text--paragraph {
-  font-family: "Baskerville";
-  font-weight: bold;
-  font-size: 3em;
-  width: auto;
-  overflow: hidden;
-  white-space: nowrap;
-  opacity: 0;
-}
-
-.zoom {
-  -webkit-animation: zoomEffect 2.5s forwards;
-          animation: zoomEffect 2.5s forwards;
-}
-
-.fade {
-  -webkit-animation: fade 6s forwards;
-          animation: fade 6s forwards;
-}
-
-#girl-image {
-  z-index: -1;
-  width: 15%;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-#girl-smile {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 60%;
-}
-
-#girl-smile__path {
-  fill: none;
-  stroke-width: 0.2px;
-  stroke: #000;
-  stroke-dasharray: 10;
-  stroke-dashoffset: 10;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.girl-smile-animation {
-  -webkit-animation: dash 0.8s linear forwards;
-          animation: dash 0.8s linear forwards;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
 }
 
 @-webkit-keyframes dash {
@@ -166,79 +94,6 @@
   }
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  -webkit-transition: ease-in-out 0.7s;
-  transition: ease-in-out 0.7s;
-  scroll-behavior: smooth;
-}
-
-main {
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
-}
-
-.color-black {
-  background-color: #111111;
-  color: #fff;
-}
-
-.color-light-blue {
-  background-color: #87cefa;
-  color: #111111;
-}
-
-.color-summer-green {
-  background-color: #58bc82;
-}
-
-.color-autumn {
-  background-color: #f96f09;
-}
-
-.color-winter {
-  background-color: #d6fffb;
-}
-
-.animation-typist {
-  -webkit-animation: typist 2.5s steps(180) 1 normal;
-          animation: typist 2.5s steps(180) 1 normal;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-
-.nextSection {
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  text-decoration: none;
-  color: #111111;
-  display: block;
-}
-
-#slide2 .nextSection {
-  color: #d6fffb;
-}
-
-.fa-angle-double-down {
-  padding: 20px;
-  font-size: 2.3em;
-}
-
-.fa-angle-double-down:hover {
-  cursor: pointer;
-}
-
-.fa-angle-double-down:active {
-  font-size: 2.4em;
-}
-
 @-webkit-keyframes typist {
   0% {
     width: 0;
@@ -269,22 +124,160 @@ main {
   }
 }
 
-@font-face {
-  font-family: "Baskerville";
-  src: url("assets/font/LibreBaskerville-Regular.ttf");
-  font-weight: 400;
+.slide {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: sans-serif;
+  position: relative;
+  margin: auto;
 }
 
-@font-face {
-  font-family: "Baskerville";
-  src: url("assets/font/LibreBaskerville-Bold.ttf");
+.slide .slide__text--container .slide__text--paragraph {
+  font-family: "Libre Baskerville", serif;
   font-weight: bold;
+  font-size: 3em;
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
 }
 
-@font-face {
-  font-family: "Baskerville";
-  src: url("assets/font/LibreBaskerville-Italic.ttf");
-  font-style: italic;
-  font-weight: 400;
+.zoom {
+  -webkit-animation: zoomEffect 2.5s forwards;
+          animation: zoomEffect 2.5s forwards;
+}
+
+.fade {
+  -webkit-animation: fade 6s forwards;
+          animation: fade 6s forwards;
+}
+
+#girl-image {
+  z-index: -1;
+  width: 15%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#girl-smile {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 60%;
+}
+
+#girl-smile__path {
+  fill: none;
+  stroke-width: 0.2px;
+  stroke: #000;
+  stroke-dasharray: 10;
+  stroke-dashoffset: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.girl-smile-animation {
+  -webkit-animation: dash 0.8s linear forwards;
+          animation: dash 0.8s linear forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-transition: ease-in-out 0.7s;
+  transition: ease-in-out 0.7s;
+  scroll-behavior: smooth;
+}
+
+.color-black {
+  background-color: #111111;
+  color: #fff;
+}
+
+.color-light-blue {
+  background-color: #3fb3fc;
+}
+
+.color-summer-green {
+  background-color: #58bc82;
+}
+
+.color-autumn {
+  background-color: #f96f09;
+}
+
+.color-winter {
+  background-color: #65fced;
+}
+
+.color-pastel-pink {
+  background-color: #ffd1dc;
+}
+
+.color-loblolly {
+  background-color: #c4cace;
+}
+
+.color-yellow-brown-gradient {
+  background: #e5c37f;
+  color: #4e3401;
+}
+
+.animation-typist {
+  -webkit-animation: typist 2.5s steps(180) 1 normal;
+          animation: typist 2.5s steps(180) 1 normal;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.nextSection {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  text-decoration: none;
+  color: #111111;
+  display: block;
+}
+
+#slide2 .nextSection {
+  color: #fff;
+}
+
+#slide14 .nextSection {
+  color: #4e3401;
+}
+
+#slide15 .nextSection {
+  color: #fff;
+}
+
+.fa-angle-double-down {
+  padding: 20px;
+  font-size: 2.3em;
+}
+
+.fa-angle-double-down:hover {
+  cursor: pointer;
+}
+
+.fa-angle-double-down:active {
+  font-size: 2.4em;
 }
 /*# sourceMappingURL=main.css.map */

@@ -105,7 +105,9 @@ main {
     .fa-angle-double-down {
         font-size: 3vw;
     }
-
+    #girl-smile {
+        top: 56%;
+    }
     #t1 {
         width: 175px;
         height: 0px;
@@ -306,207 +308,206 @@ main {
     }
 
     #t1 {
-            width: 125px;
-            height: 0px;
-            position: fixed;
-            background-color: rgb(168, 102, 2);
-            bottom: 15%;
-            left: 43%;
-            background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(209, 131, 14), rgb(168, 102, 2));
+        width: 125px;
+        height: 0px;
+        position: fixed;
+        background-color: rgb(168, 102, 2);
+        bottom: 15%;
+        left: 43%;
+        background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(209, 131, 14), rgb(168, 102, 2));
+    }
+
+    .t1 {
+        animation: growT 3s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 1.5s;
+    }
+
+    .treeGone {
+        display: none;
+    }
+
+    #b1,
+    #b2,
+    #b3,
+    #b4,
+    #b5,
+    #b6 {
+        width: 0px;
+        height: 40px;
+        position: fixed;
+        background-color: rgb(168, 102, 2);
+        bottom: 40%;
+        left: 45%;
+        transform: rotate(215deg);
+        transform-origin: left;
+        background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(177, 106, 0), rgb(168, 102, 2));
+    }
+
+    .b1,
+    .b2,
+    .b3,
+    .b4 {
+        animation: growB 2s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 4s;
+    }
+
+    .g1,
+    .g2,
+    .g5,
+    .g6 {
+        animation: growG 2s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 5.5s;
+    }
+
+    .g3,
+    .g4 {
+        animation: growGG 2s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 5.5s;
+    }
+
+    .b5,
+    .b6 {
+        animation: growBT 1s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 4.7s;
+    }
+
+    #g1,
+    #g2,
+    #g3,
+    #g4,
+    #g5,
+    #g6 {
+        width: 0px;
+        height: 0px;
+        position: fixed;
+        background-color: rgb(6, 202, 23);
+        bottom: 48%;
+        left: 24.5%;
+        border-radius: 50%;
+        background-image: linear-gradient(rgb(6, 202, 23), rgb(4, 136, 15));
+    }
+
+    #g2 {
+        bottom: 48%;
+        left: 68%;
+    }
+
+    /* stor */
+    #g3 {
+        bottom: 78%;
+        left: 36%;
+    }
+
+    /* stor */
+    #g4 {
+        bottom: 78%;
+        left: 59%;
+    }
+
+    #g5 {
+        bottom: 60%;
+        left: 68%;
+    }
+
+    #g6 {
+        bottom: 59%;
+        left: 27.5%;
+    }
+
+    #b2 {
+        transform: rotate(-35deg);
+        bottom: 40%;
+        left: 56.5%;
+    }
+
+    #b3 {
+        transform: rotate(-45deg);
+        bottom: 48%;
+        left: 56.5%;
+    }
+
+    #b4 {
+        transform: rotate(225deg);
+        bottom: 48%;
+        left: 46%;
+    }
+
+    #b5 {
+        height: 70px;
+        transform: rotate(245deg);
+        bottom: 63%;
+        left: 49%;
+        background-image: linear-gradient(to bottom left, rgb(168, 102, 2), rgb(209, 131, 14));
+        border-radius: 8px 10px 10px 8px;
+    }
+
+    #b6 {
+        height: 70px;
+        transform: rotate(-65deg);
+        bottom: 63%;
+        left: 54%;
+        background-image: linear-gradient(to top left, rgb(168, 102, 2), rgb(209, 131, 14));
+        border-radius: 20px 10px 10px 8px;
+    }
+
+    @keyframes growT {
+        to {
+            height: 500px;
+        }
+    }
+
+    @keyframes growB {
+        to {
+            width: 155px;
+        }
+    }
+
+    @keyframes growBT {
+        to {
+            width: 140px;
+        }
+    }
+
+    @keyframes growG {
+        from {
+            transform: scale(0);
         }
 
-        .t1 {
-            animation: growT 3s linear forwards;
-            animation-iteration-count: 1;
-            animation-delay: 1.5s;
+        to {
+            transform: scale(2);
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    @keyframes growGG {
+        from {
+            transform: scale(0);
         }
 
-        .treeGone {
-            display: none;
+        to {
+            transform: scale(3);
+            width: 80px;
+            height: 80px;
         }
-
-        #b1,
-        #b2,
-        #b3,
-        #b4,
-        #b5,
-        #b6 {
-            width: 0px;
-            height: 40px;
-            position: fixed;
-            background-color: rgb(168, 102, 2);
-            bottom: 40%;
-            left: 45%;
-            transform: rotate(215deg);
-            transform-origin: left;
-            background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(177, 106, 0), rgb(168, 102, 2));
-        }
-
-        .b1,
-        .b2,
-        .b3,
-        .b4 {
-            animation: growB 2s linear forwards;
-            animation-iteration-count: 1;
-            animation-delay: 4.0s;
-        }
-
-        .g1,
-        .g2,
-        .g5,
-        .g6 {
-            animation: growG 2s linear forwards;
-            animation-iteration-count: 1;
-            animation-delay: 5.5s;
-        }
-
-        .g3,
-        .g4 {
-            animation: growGG 2s linear forwards;
-            animation-iteration-count: 1;
-            animation-delay: 5.5s;
-        }
-
-        .b5,
-        .b6 {
-            animation: growBT 1s linear forwards;
-            animation-iteration-count: 1;
-            animation-delay: 4.7s;
-        }
-
-        #g1,
-        #g2,
-        #g3,
-        #g4,
-        #g5,
-        #g6 {
-            width: 0px;
-            height: 0px;
-            position: fixed;
-            background-color: rgb(6, 202, 23);
-            bottom: 48%;
-            left: 24.5%;
-            border-radius: 50%;
-            background-image: linear-gradient(rgb(6, 202, 23), rgb(4, 136, 15));
-        }
-
-        #g2 {
-            bottom: 48%;
-            left: 68%;
-        }
-
-        /* stor */
-        #g3 {
-            bottom: 78%;
-            left: 36%;
-        }
-
-        /* stor */
-        #g4 {
-            bottom: 78%;
-            left: 59%;
-        }
-
-        #g5 {
-            bottom: 60%;
-            left: 68%;
-        }
-
-        #g6 {
-            bottom: 59%;
-            left: 27.5%;
-        }
-
-        #b2 {
-            transform: rotate(-35deg);
-            bottom: 40%;
-            left: 56.5%;
-        }
-
-        #b3 {
-            transform: rotate(-45deg);
-            bottom: 48%;
-            left: 56.5%;
-        }
-
-        #b4 {
-            transform: rotate(225deg);
-            bottom: 48%;
-            left: 46%;
-        }
-
-        #b5 {
-            height: 70px;
-            transform: rotate(245deg);
-            bottom: 63%;
-            left: 49%;
-            background-image: linear-gradient(to bottom left, rgb(168, 102, 2), rgb(209, 131, 14));
-            border-radius: 8px 10px 10px 8px;
-        }
-
-        #b6 {
-            height: 70px;
-            transform: rotate(-65deg);
-            bottom: 63%;
-            left: 54%;
-            background-image: linear-gradient(to top left, rgb(168, 102, 2), rgb(209, 131, 14));
-            border-radius: 20px 10px 10px 8px;
-        }
-
-        @keyframes growT {
-            to {
-                height: 500px;
-            }
-        }
-
-        @keyframes growB {
-            to {
-                width: 155px;
-            }
-        }
-
-        @keyframes growBT {
-            to {
-                width: 140px;
-            }
-        }
-
-        @keyframes growG {
-            from {
-                transform: scale(0);
-            }
-
-            to {
-                transform: scale(2);
-                width: 80px;
-                height: 80px;
-            }
-        }
-
-        @keyframes growGG {
-            from {
-                transform: scale(0);
-            }
-
-            to {
-                transform: scale(3);
-                width: 80px;
-                height: 80px;
-            }
-        }
+    }
 }
 // Phone Screen
 @media only screen and (max-width: 480px) {
-
-
-    
     .slide__text--paragraph {
         font-size: 5vw;
     }
     .fa-angle-double-down {
         font-size: 6vw;
     }
-
+    #girl-smile {
+        top: 53%;
+    }
     #t1 {
         width: 90px;
         height: 0px;

@@ -28,13 +28,47 @@
     }
 }
 
-.zoom{
+.zoom {
     animation: zoomEffect 2.5s forwards;
 }
-.fade{
+.fade {
     animation: fade 6s forwards;
 }
 
+#girl-image {
+    z-index: -1;
+    width: 15%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#girl-smile {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60%;
+}
+#girl-smile__path {
+    fill: none;
+    stroke-width: 0.2px;
+    stroke: #000;
+    stroke-dasharray: 10;
+    stroke-dashoffset: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.girl-smile-animation {
+    animation: dash 0.8s linear forwards;
+    animation-delay: 3s;
+}
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 10;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
 @keyframes zoomEffect {
     0% {
         width: 100%;
@@ -57,7 +91,7 @@
         opacity: 0;
     }
 
-    70%{
+    70% {
         opacity: 0;
     }
     100% {

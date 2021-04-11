@@ -83,3 +83,8 @@ $(document).ready(function(){
     }, 3000);
   });
 });
+
+function setSmileAnimation() {
+  const smile = document.getElementById('girl-smile__path')
+  smile.classList.add("girl-smile-animation")
+}

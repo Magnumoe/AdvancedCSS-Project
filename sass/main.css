@@ -54,6 +54,58 @@
           animation: fade 6s forwards;
 }
 
+#girl-image {
+  z-index: -1;
+  width: 15%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#girl-smile {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 60%;
+}
+
+#girl-smile__path {
+  fill: none;
+  stroke-width: 0.2px;
+  stroke: #000;
+  stroke-dasharray: 10;
+  stroke-dashoffset: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.girl-smile-animation {
+  -webkit-animation: dash 0.8s linear forwards;
+          animation: dash 0.8s linear forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 10;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 10;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 @-webkit-keyframes zoomEffect {
   0% {
     width: 100%;

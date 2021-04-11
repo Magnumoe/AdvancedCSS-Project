@@ -1,7 +1,3 @@
-/*@mixin typist($str) {
-    
-}
-*/
 @-webkit-keyframes opacityFade {
   0% {
     opacity: 0;
@@ -10,6 +6,7 @@
     opacity: 1;
   }
 }
+
 @keyframes opacityFade {
   0% {
     opacity: 0;
@@ -17,75 +14,6 @@
   100% {
     opacity: 1;
   }
-}
-
-.slide {
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: sans-serif;
-  position: relative;
-  margin: auto;
-}
-
-.slide .slide__text--container .slide__text--paragraph {
-  font-family: "Baskerville";
-  font-weight: bold;
-  font-size: 3em;
-  width: auto;
-  overflow: hidden;
-  white-space: nowrap;
-  opacity: 0;
-}
-
-.zoom {
-  -webkit-animation: zoomEffect 2.5s forwards;
-          animation: zoomEffect 2.5s forwards;
-}
-
-.fade {
-  -webkit-animation: fade 6s forwards;
-          animation: fade 6s forwards;
-}
-
-#girl-image {
-  z-index: -1;
-  width: 15%;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-#girl-smile {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 60%;
-}
-
-#girl-smile__path {
-  fill: none;
-  stroke-width: 0.2px;
-  stroke: #000;
-  stroke-dasharray: 10;
-  stroke-dashoffset: 10;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.girl-smile-animation {
-  -webkit-animation: dash 0.8s linear forwards;
-          animation: dash 0.8s linear forwards;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
 }
 
 @-webkit-keyframes dash {
@@ -166,6 +94,105 @@
   }
 }
 
+@-webkit-keyframes typist {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    width: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes typist {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    width: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.slide {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: sans-serif;
+  position: relative;
+  margin: auto;
+}
+
+.slide .slide__text--container .slide__text--paragraph {
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  font-size: 3em;
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+.zoom {
+  -webkit-animation: zoomEffect 2.5s forwards;
+          animation: zoomEffect 2.5s forwards;
+}
+
+.fade {
+  -webkit-animation: fade 6s forwards;
+          animation: fade 6s forwards;
+}
+
+#girl-image {
+  z-index: -1;
+  width: 15%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#girl-smile {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 60%;
+}
+
+#girl-smile__path {
+  fill: none;
+  stroke-width: 0.2px;
+  stroke: #000;
+  stroke-dasharray: 10;
+  stroke-dashoffset: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.girl-smile-animation {
+  -webkit-animation: dash 0.8s linear forwards;
+          animation: dash 0.8s linear forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -237,54 +264,5 @@ main {
 
 .fa-angle-double-down:active {
   font-size: 2.4em;
-}
-
-@-webkit-keyframes typist {
-  0% {
-    width: 0;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-    width: 0;
-  }
-  100% {
-    width: 100%;
-    opacity: 1;
-  }
-}
-
-@keyframes typist {
-  0% {
-    width: 0;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-    width: 0;
-  }
-  100% {
-    width: 100%;
-    opacity: 1;
-  }
-}
-
-@font-face {
-  font-family: "Baskerville";
-  src: url("assets/font/LibreBaskerville-Regular.ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Baskerville";
-  src: url("assets/font/LibreBaskerville-Bold.ttf");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Baskerville";
-  src: url("assets/font/LibreBaskerville-Italic.ttf");
-  font-style: italic;
-  font-weight: 400;
 }
 /*# sourceMappingURL=main.css.map */

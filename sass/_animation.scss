@@ -1,16 +1,62 @@
 // Animation
-
-// mixin  for text animation if needed
-/*@mixin typist($str) {
-    
-}
-*/
-
 @keyframes opacityFade {
     0% {
         opacity: 0;
     }
     100% {
+        opacity: 1;
+    }
+}
+// Animation for girl smile
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 10;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes zoomEffect {
+    0% {
+        width: 100%;
+        opacity: 1;
+    }
+    50% {
+        width: 50%;
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+//Letter by letter animation
+@keyframes typist {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        width: 0;
+    }
+    100% {
+        width: 100%;
         opacity: 1;
     }
 }

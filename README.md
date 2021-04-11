@@ -2,7 +2,8 @@
 
 # Group Yellowstone
 
-    Magnus, Håkon, Adrian & Cedric
+    Members & Github usernames:
+    Magnus(Magnumoe), Håkon(Haakoasd), Adrian(Adriafh) & Cedric(CedricThode)
 
 # GENERAL INFO
 

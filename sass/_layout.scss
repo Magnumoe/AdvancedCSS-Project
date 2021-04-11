@@ -81,7 +81,6 @@ main {
     font-size: 2.4em;
 }
 
-
 @keyframes typist {
     0% {
         width: 0;
@@ -96,5 +95,206 @@ main {
     100% {
         width: 100%;
         opacity: 1;
+    }
+}
+// Tablet screen
+@media screen and (max-width: 800px) {
+    .slide__text--paragraph {
+        font-size: 5vw;
+    }
+    .fa-angle-double-down {
+        font-size: 8vw;
+    }
+}
+// Phone Screen
+@media screen and (max-width: 480px) {
+    #t1 {
+        width: 105px;
+        height: 0px;
+        position: fixed;
+        background-color: rgb(168, 102, 2);
+        bottom: 15%;
+        left: 43%;
+        background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(209, 131, 14), rgb(168, 102, 2));
+    }
+
+    .t1 {
+        animation: growT 3s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 1.5s;
+    }
+
+    .treeGone {
+        display: none;
+    }
+
+    #b1,
+    #b2,
+    #b3,
+    #b4,
+    #b5,
+    #b6 {
+        width: 0px;
+        height: 30px;
+        position: fixed;
+        background-color: rgb(168, 102, 2);
+        bottom: 40%;
+        left: 45.5%;
+        transform: rotate(215deg);
+        transform-origin: left;
+        background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(177, 106, 0), rgb(168, 102, 2));
+    }
+
+    .b1,
+    .b2,
+    .b3,
+    .b4 {
+        animation: growB 2s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 4s;
+    }
+
+    .g1,
+    .g2,
+    .g5,
+    .g6 {
+        animation: growG 2s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 5.5s;
+    }
+
+    .g3,
+    .g4 {
+        animation: growGG 2s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 5.5s;
+    }
+
+    .b5,
+    .b6 {
+        animation: growBT 1s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 4.7s;
+    }
+
+    #g1,
+    #g2,
+    #g3,
+    #g4,
+    #g5,
+    #g6 {
+        width: 0px;
+        height: 0px;
+        position: fixed;
+        background-color: rgb(6, 202, 23);
+        bottom: 45%;
+        left: 21.5%;
+        border-radius: 50%;
+        background-image: linear-gradient(rgb(6, 202, 23), rgb(4, 136, 15));
+    }
+
+    #g2 {
+        bottom: 45%;
+        left: 76%;
+    }
+
+    /* stor */
+    #g3 {
+        bottom: 77%;
+        left: 32%;
+    }
+
+    /* stor */
+    #g4 {
+        bottom: 77%;
+        left: 65%;
+    }
+
+    #g5 {
+        bottom: 56.5%;
+        left: 76%;
+    }
+
+    #g6 {
+        bottom: 55%;
+        left: 21.5%;
+    }
+
+    #b2 {
+        transform: rotate(-35deg);
+        bottom: 40%;
+        left: 63%;
+    }
+
+    #b3 {
+        transform: rotate(-45deg);
+        bottom: 48%;
+        left: 63%;
+    }
+
+    #b4 {
+        transform: rotate(225deg);
+        bottom: 48%;
+        left: 46.5%;
+    }
+
+    #b5 {
+        height: 55px;
+        transform: rotate(245deg);
+        bottom: 64%;
+        left: 49%;
+        background-image: linear-gradient(to bottom left, rgb(168, 102, 2), rgb(209, 131, 14));
+        border-radius: 8px 10px 10px 8px;
+    }
+
+    #b6 {
+        height: 55px;
+        transform: rotate(-65deg);
+        bottom: 64%;
+        left: 59%;
+        background-image: linear-gradient(to top left, rgb(168, 102, 2), rgb(209, 131, 14));
+        border-radius: 20px 10px 10px 8px;
+    }
+
+    @keyframes growT {
+        to {
+            height: 500px;
+        }
+    }
+
+    @keyframes growB {
+        to {
+            width: 125px;
+        }
+    }
+
+    @keyframes growBT {
+        to {
+            width: 120px;
+        }
+    }
+
+    @keyframes growG {
+        from {
+            transform: scale(0);
+        }
+
+        to {
+            transform: scale(2);
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    @keyframes growGG {
+        from {
+            transform: scale(0);
+        }
+
+        to {
+            transform: scale(3);
+            width: 60px;
+            height: 60px;
+        }
     }
 }

@@ -1,0 +1,700 @@
+// Layout
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    transition: ease-in-out 0.7s;
+    scroll-behavior: smooth;
+}
+
+main {
+    scroll-snap-type: y mandatory;
+}
+
+.color-black {
+    background-color: $black;
+    color: $white;
+}
+.color-light-blue {
+    background-color: #3fb3fc;
+}
+
+.color-summer-green {
+    background-color: #58bc82;
+}
+
+.color-autumn {
+    background-color: #f96f09;
+}
+
+.color-winter {
+    background-color: #65fced;
+}
+.color-pastel-pink {
+    background-color: $pastel-pink;
+}
+.color-loblolly {
+    background-color: #c4cace;
+}
+.color-yellow-brown-gradient {
+    background: rgb(229, 195, 127);
+    color: $brown;
+}
+
+.animation-typist {
+    animation: typist 2.5s steps(180) 1 normal;
+    animation-fill-mode: both;
+}
+
+.nextSection {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    text-decoration: none;
+    color: $black;
+    display: block;
+}
+
+#slide2 .nextSection {
+    color: $white;
+}
+#slide14 .nextSection {
+    color: $brown;
+}
+#slide15 .nextSection {
+    color: $white;
+}
+
+.fa-angle-double-down {
+    padding: 20px;
+    font-size: 2.3em;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.fa-angle-double-down:active {
+    font-size: 2.4em;
+}
+
+@keyframes typist {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .slide__text--paragraph {
+        font-size: 4vw;
+    }
+    .fa-angle-double-down {
+        font-size: 3vw;
+    }
+    #girl-smile {
+        top: 56%;
+    }
+    #t1 {
+        width: 175px;
+        height: 0px;
+        position: fixed;
+        background-color: rgb(168, 102, 2);
+        bottom: 5%;
+        left: 45.5%;
+        background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(209, 131, 14), rgb(168, 102, 2));
+    }
+
+    .t1 {
+        animation: growT 3s linear forwards;
+        animation-iteration-count: 1;
+    }
+
+    .treeGone {
+        display: none;
+    }
+
+    #b1,
+    #b2,
+    #b3,
+    #b4,
+    #b5,
+    #b6 {
+        width: 0px;
+        height: 50px;
+        position: fixed;
+        background-color: rgb(168, 102, 2);
+        bottom: 33%;
+        left: 46.5%;
+        transform: rotate(215deg);
+        transform-origin: left;
+        background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(177, 106, 0), rgb(168, 102, 2));
+    }
+
+    .b1,
+    .b2,
+    .b3,
+    .b4 {
+        animation: growB 2s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 2.5s;
+    }
+
+    .g1,
+    .g2,
+    .g5,
+    .g6 {
+        animation: growG 2s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 4s;
+    }
+
+    .g3,
+    .g4 {
+        animation: growGG 2s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 4s;
+    }
+
+    .b5,
+    .b6 {
+        animation: growBT 1s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 2.8s;
+    }
+
+    #g1,
+    #g2,
+    #g3,
+    #g4,
+    #g5,
+    #g6 {
+        width: 0px;
+        height: 0px;
+        position: fixed;
+        background-color: rgb(6, 202, 23);
+        bottom: 47%;
+        left: 34%;
+        border-radius: 50%;
+        background-image: linear-gradient(rgb(6, 202, 23), rgb(4, 136, 15));
+    }
+
+    #g2 {
+        bottom: 47%;
+        left: 61%;
+    }
+
+    /* stor */
+    #g3 {
+        bottom: 82%;
+        left: 41%;
+    }
+
+    /* stor */
+    #g4 {
+        bottom: 82%;
+        left: 53%;
+    }
+
+    #g5 {
+        bottom: 64%;
+        left: 60%;
+    }
+
+    #g6 {
+        bottom: 64%;
+        left: 35%;
+    }
+
+    #b2 {
+        transform: rotate(-35deg);
+        bottom: 33%;
+        left: 53.9%;
+    }
+
+    #b3 {
+        transform: rotate(-45deg);
+        bottom: 47%;
+        left: 53.5%;
+    }
+
+    #b4 {
+        transform: rotate(225deg);
+        bottom: 47%;
+        left: 46.5%;
+    }
+
+    #b5 {
+        height: 90px;
+        transform: rotate(245deg);
+        bottom: 61%;
+        left: 48%;
+        background-image: linear-gradient(to bottom left, rgb(168, 102, 2), rgb(209, 131, 14));
+        border-radius: 8px 10px 10px 8px;
+    }
+
+    #b6 {
+        height: 100px;
+        transform: rotate(-65deg);
+        bottom: 60.5%;
+        left: 52%;
+        background-image: linear-gradient(to top left, rgb(168, 102, 2), rgb(209, 131, 14));
+        border-radius: 20px 10px 10px 8px;
+    }
+
+    @keyframes growT {
+        to {
+            height: 820px;
+        }
+    }
+
+    @keyframes growB {
+        to {
+            width: 250px;
+        }
+    }
+
+    @keyframes growBT {
+        to {
+            width: 225px;
+        }
+    }
+
+    @keyframes growG {
+        from {
+            transform: scale(0);
+        }
+
+        to {
+            transform: scale(2);
+            width: 115px;
+            height: 115px;
+        }
+    }
+
+    @keyframes growGG {
+        from {
+            transform: scale(0);
+        }
+
+        to {
+            transform: scale(3);
+            width: 115px;
+            height: 115px;
+        }
+    }
+}
+
+// Tablet screen
+@media only screen and (max-width: 800px) {
+    .slide__text--paragraph {
+        font-size: 4vw;
+    }
+    .fa-angle-double-down {
+        font-size: 4vw;
+    }
+
+    #t1 {
+        width: 125px;
+        height: 0px;
+        position: fixed;
+        background-color: rgb(168, 102, 2);
+        bottom: 15%;
+        left: 43%;
+        background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(209, 131, 14), rgb(168, 102, 2));
+    }
+
+    .t1 {
+        animation: growT 3s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 1.5s;
+    }
+
+    .treeGone {
+        display: none;
+    }
+
+    #b1,
+    #b2,
+    #b3,
+    #b4,
+    #b5,
+    #b6 {
+        width: 0px;
+        height: 40px;
+        position: fixed;
+        background-color: rgb(168, 102, 2);
+        bottom: 40%;
+        left: 45%;
+        transform: rotate(215deg);
+        transform-origin: left;
+        background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(177, 106, 0), rgb(168, 102, 2));
+    }
+
+    .b1,
+    .b2,
+    .b3,
+    .b4 {
+        animation: growB 2s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 4s;
+    }
+
+    .g1,
+    .g2,
+    .g5,
+    .g6 {
+        animation: growG 2s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 5.5s;
+    }
+
+    .g3,
+    .g4 {
+        animation: growGG 2s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 5.5s;
+    }
+
+    .b5,
+    .b6 {
+        animation: growBT 1s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 4.7s;
+    }
+
+    #g1,
+    #g2,
+    #g3,
+    #g4,
+    #g5,
+    #g6 {
+        width: 0px;
+        height: 0px;
+        position: fixed;
+        background-color: rgb(6, 202, 23);
+        bottom: 48%;
+        left: 24.5%;
+        border-radius: 50%;
+        background-image: linear-gradient(rgb(6, 202, 23), rgb(4, 136, 15));
+    }
+
+    #g2 {
+        bottom: 48%;
+        left: 68%;
+    }
+
+    /* stor */
+    #g3 {
+        bottom: 78%;
+        left: 36%;
+    }
+
+    /* stor */
+    #g4 {
+        bottom: 78%;
+        left: 59%;
+    }
+
+    #g5 {
+        bottom: 60%;
+        left: 68%;
+    }
+
+    #g6 {
+        bottom: 59%;
+        left: 27.5%;
+    }
+
+    #b2 {
+        transform: rotate(-35deg);
+        bottom: 40%;
+        left: 56.5%;
+    }
+
+    #b3 {
+        transform: rotate(-45deg);
+        bottom: 48%;
+        left: 56.5%;
+    }
+
+    #b4 {
+        transform: rotate(225deg);
+        bottom: 48%;
+        left: 46%;
+    }
+
+    #b5 {
+        height: 70px;
+        transform: rotate(245deg);
+        bottom: 63%;
+        left: 49%;
+        background-image: linear-gradient(to bottom left, rgb(168, 102, 2), rgb(209, 131, 14));
+        border-radius: 8px 10px 10px 8px;
+    }
+
+    #b6 {
+        height: 70px;
+        transform: rotate(-65deg);
+        bottom: 63%;
+        left: 54%;
+        background-image: linear-gradient(to top left, rgb(168, 102, 2), rgb(209, 131, 14));
+        border-radius: 20px 10px 10px 8px;
+    }
+
+    @keyframes growT {
+        to {
+            height: 500px;
+        }
+    }
+
+    @keyframes growB {
+        to {
+            width: 155px;
+        }
+    }
+
+    @keyframes growBT {
+        to {
+            width: 140px;
+        }
+    }
+
+    @keyframes growG {
+        from {
+            transform: scale(0);
+        }
+
+        to {
+            transform: scale(2);
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    @keyframes growGG {
+        from {
+            transform: scale(0);
+        }
+
+        to {
+            transform: scale(3);
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+// Phone Screen
+@media only screen and (max-width: 480px) {
+    .slide__text--paragraph {
+        font-size: 5vw;
+    }
+    .fa-angle-double-down {
+        font-size: 6vw;
+    }
+    #girl-smile {
+        top: 53%;
+    }
+    #t1 {
+        width: 90px;
+        height: 0px;
+        position: fixed;
+        background-color: rgb(168, 102, 2);
+        bottom: 10%;
+        left: 43%;
+        background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(209, 131, 14), rgb(168, 102, 2));
+    }
+
+    .t1 {
+        animation: growT 3s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 1.5s;
+    }
+
+    .treeGone {
+        display: none;
+    }
+
+    #b1,
+    #b2,
+    #b3,
+    #b4,
+    #b5,
+    #b6 {
+        width: 0px;
+        height: 30px;
+        position: fixed;
+        background-color: rgb(168, 102, 2);
+        bottom: 40%;
+        left: 45.5%;
+        transform: rotate(215deg);
+        transform-origin: left;
+        background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(177, 106, 0), rgb(168, 102, 2));
+    }
+
+    .b1,
+    .b2,
+    .b3,
+    .b4 {
+        animation: growB 2s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 4s;
+    }
+
+    .g1,
+    .g2,
+    .g5,
+    .g6 {
+        animation: growG 2s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 5.5s;
+    }
+
+    .g3,
+    .g4 {
+        animation: growGG 2s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 5.5s;
+    }
+
+    .b5,
+    .b6 {
+        animation: growBT 1s linear forwards;
+        animation-iteration-count: 1;
+        animation-delay: 4.7s;
+    }
+
+    #g1,
+    #g2,
+    #g3,
+    #g4,
+    #g5,
+    #g6 {
+        width: 0px;
+        height: 0px;
+        position: fixed;
+        background-color: rgb(6, 202, 23);
+        bottom: 45%;
+        left: 21.5%;
+        border-radius: 50%;
+        background-image: linear-gradient(rgb(6, 202, 23), rgb(4, 136, 15));
+    }
+
+    #g2 {
+        bottom: 45%;
+        left: 76%;
+    }
+
+    /* stor */
+    #g3 {
+        bottom: 77%;
+        left: 32%;
+    }
+
+    /* stor */
+    #g4 {
+        bottom: 77%;
+        left: 65%;
+    }
+
+    #g5 {
+        bottom: 56.5%;
+        left: 76%;
+    }
+
+    #g6 {
+        bottom: 55%;
+        left: 21.5%;
+    }
+
+    #b2 {
+        transform: rotate(-35deg);
+        bottom: 40%;
+        left: 63%;
+    }
+
+    #b3 {
+        transform: rotate(-45deg);
+        bottom: 48%;
+        left: 63%;
+    }
+
+    #b4 {
+        transform: rotate(225deg);
+        bottom: 48%;
+        left: 46.5%;
+    }
+
+    #b5 {
+        height: 55px;
+        transform: rotate(245deg);
+        bottom: 64%;
+        left: 49%;
+        background-image: linear-gradient(to bottom left, rgb(168, 102, 2), rgb(209, 131, 14));
+        border-radius: 8px 10px 10px 8px;
+    }
+
+    #b6 {
+        height: 55px;
+        transform: rotate(-65deg);
+        bottom: 64%;
+        left: 59%;
+        background-image: linear-gradient(to top left, rgb(168, 102, 2), rgb(209, 131, 14));
+        border-radius: 20px 10px 10px 8px;
+    }
+
+    @keyframes growT {
+        to {
+            height: 500px;
+        }
+    }
+
+    @keyframes growB {
+        to {
+            width: 125px;
+        }
+    }
+
+    @keyframes growBT {
+        to {
+            width: 120px;
+        }
+    }
+
+    @keyframes growG {
+        from {
+            transform: scale(0);
+        }
+
+        to {
+            transform: scale(2);
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    @keyframes growGG {
+        from {
+            transform: scale(0);
+        }
+
+        to {
+            transform: scale(3);
+            width: 60px;
+            height: 60px;
+        }
+    }
+}

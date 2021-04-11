@@ -1,0 +1,108 @@
+// Imports
+@import "colors";
+// Components
+
+// slides
+.slide {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+    position: relative;
+    margin: auto;
+
+    .slide__text--container {
+        .slide__text--paragraph {
+            font-family: "Libre Baskerville", serif;
+            font-weight: bold;
+            width: auto;
+            overflow: hidden;
+            white-space: nowrap;
+            opacity: 0;
+        }
+    }
+}
+
+.zoom {
+    animation: zoomEffect 2.5s forwards;
+}
+
+.fade {
+    animation: fade 6s forwards;
+}
+
+#girl-image {
+    z-index: -1;
+    width: 15%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#girl-smile {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60%;
+}
+
+#girl-smile__path {
+    fill: none;
+    stroke-width: 0.2px;
+    stroke: #000;
+    stroke-dasharray: 10;
+    stroke-dashoffset: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.girl-smile-animation {
+    animation: dash 0.8s linear forwards;
+    animation-delay: 3s;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 10;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes zoomEffect {
+    0% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    50% {
+        width: 50%;
+        opacity: 0;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -10,16 +10,14 @@ body {
     scroll-behavior: smooth;
 }
 main {
-    scroll-snap-type: y mandatory;
+    //scroll-snap-type: y mandatory;
 }
 .color-black {
-    background-color: #111111;
-    color: #fff;
+    background-color: $black;
+    color: $white;
 }
-
 .color-light-blue {
-    background-color: #87cefa;
-    color: #111111;
+    background-color: #3fb3fc;
 }
 .color-summer-green {
     background-color: #58bc82;
@@ -28,7 +26,17 @@ main {
     background-color: #f96f09;
 }
 .color-winter {
-    background-color: #d6fffb;
+    background-color: #65fced;
+}
+.color-pastel-pink {
+    background-color: $pastel-pink;
+}
+.color-loblolly {
+    background-color: #c4cace;
+}
+.color-yellow-brown-gradient {
+    background: rgb(229, 195, 127);
+    color: $brown;
 }
 .animation-typist {
     animation: typist 2.5s steps(180) 1 normal;
@@ -39,11 +47,17 @@ main {
     bottom: 0;
     text-align: center;
     text-decoration: none;
-    color: #111111;
+    color: $black;
     display: block;
 }
 #slide2 .nextSection {
-    color: #d6fffb;
+    color: $white;
+}
+#slide14 .nextSection {
+    color: $brown;
+}
+#slide15 .nextSection {
+    color: $white;
 }
 .fa-angle-double-down {
     padding: 20px;

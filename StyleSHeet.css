@@ -1,0 +1,66 @@
+body {
+    background-image: url("bilder/gqnxmy5s5pb11.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Apple {
+position: fixed;
+left: 50%;
+bottom: 0%;
+width: fit-content;
+}
+
+#Apple>img {
+    width: 200px;
+    height: 200px;
+    
+}
+
+
+#hands {
+    width: 100px;
+    height: 100px;
+    -webkit-animation: fadeinout 2s linear forwards;
+    animation: fadeinout 2s linear forwards;
+
+} 
+
+#hands2 {
+    width: 100px;
+    height: 100px;
+    animation-delay: 2s;
+    -webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 4s linear forwards;
+
+} 
+
+#hands3 {
+    width: 100px;
+    height: 100px;
+    animation-delay: 3s;
+    -webkit-animation: fadeinout 5s linear forwards;
+    animation: fadeinout 5s linear forwards;
+
+}
+
+#hands4 {
+    width: 100px;
+    height: 100px;
+    animation-delay: 4s;
+    -webkit-animation: fadeinout 6s linear forwards;
+    animation: fadeinout 6s linear forwards;
+
+} 
+
+
+@-webkit-keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  
+  @keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+

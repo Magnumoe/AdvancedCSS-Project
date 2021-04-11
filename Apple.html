@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="StyleSHeet.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Apple">
+        <img src="bilder/Small-Apple-Fruit-Vector-Transparent-PNG.png">
+    </div>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+width="100%" height="900px" top="0" viewBox="-10 10 360 55">
+<path d="M 0 0 T 20 2 L 32 5" id="wire" opacity="0"></path>
+<path d="M 32 5 L 42 7 L 54 14 L 60 20" id="wire2" opacity="0"></path>
+<path d="M 60 20 L 73 25 L 83 33 L 88 43" id="wire3" opacity="0"></path>
+<path d="M 86 43 L 94 54 L 99 66 L 103 79" id="wire4" opacity="0"></path>
+
+<image id="hands"  href="bilder/handwhite.png" cx="" cy="">
+    <animateMotion dur="1s" repeatCount="0" attributeName="opacity" from="1" to="0">
+        <mpath xlink:href="#wire"></mpath>
+    </animateMotion>
+</image>
+
+<image id="hands2"  href="bilder/HandMexican.png" cx="32" cy="5">
+    <animateMotion begin="1.1" dur="1s" repeatCount="0" attributeName="opacity" from="1" to="0">
+        <mpath xlink:href="#wire2"></mpath>
+    </animateMotion>
+</image>
+
+<image id="hands3"  href="bilder/Handblack.png" cx="60" cy="20">
+    <animateMotion begin="2.1" dur="1s" repeatCount="0" attributeName="opacity" from="1" to="0">
+        <mpath xlink:href="#wire3"></mpath>
+    </animateMotion>
+</image>
+
+<image id="hands4"  href="bilder/HandBright.png" cx="88" cy="43">
+    <animateMotion begin="3.1" dur="1s" repeatCount="0" attributeName="opacity" from="1" to="0">
+        <mpath xlink:href="#wire4"></mpath>
+    </animateMotion>
+</image>
+</svg>
+
+
+
+</body>
+</html>

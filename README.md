@@ -5,7 +5,7 @@
     Members & Github usernames:
     Magnus(Magnumoe), Håkon(Haakoasd), Adrian(Adriafh) & Cedric(CedricThode)
 
-## GENERAL INFO
+## General
 
     This is a group project in IDG1293, Advanced CSS, assignment 2.
     The assignment is based on the designs created for assignment 1.
@@ -13,7 +13,6 @@
 
 ## Github page
 
-    link to github page:
     [Magnumoe.github.io/AdvancedCSS-Project/](https://magnumoe.github.io/AdvancedCSS-Project/)
 
 ## Visual
@@ -29,7 +28,7 @@
 </section>
 ```
 
-## TECHNICAL
+## Technical info
 
     Our solution for the project is based on Jquery & Scss.
     We use Jquery primarily for the flow and functionality of the website.

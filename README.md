@@ -13,7 +13,7 @@
 
 ## Github page
 
-    [Magnumoe.github.io/AdvancedCSS-Project/]: https://magnumoe.github.io/AdvancedCSS-Project/
+    [AdvancedCSS-Project github page](https://magnumoe.github.io/AdvancedCSS-Project/)
 
 ## Visual
 

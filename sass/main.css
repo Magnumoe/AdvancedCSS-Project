@@ -241,6 +241,7 @@ main {
       scroll-snap-type: y mandatory;
 }
 
+/*Colors for backgrounds*/
 .color-black {
   background-color: #111111;
   color: #fff;
@@ -275,6 +276,7 @@ main {
   color: #4e3401;
 }
 
+/*Letter-by-letter animation*/
 .animation-typist {
   -webkit-animation: typist 2.5s steps(180) 1 normal;
           animation: typist 2.5s steps(180) 1 normal;
@@ -316,6 +318,61 @@ main {
   font-size: 2.4em;
 }
 
+/*Tree invisible on page load*/
+.treeGone {
+  display: none;
+}
+
+.t1 {
+  -webkit-animation: growT 3s linear forwards;
+          animation: growT 3s linear forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+#t1 {
+  height: 0px;
+  position: fixed;
+  background-color: #a86602;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a86602), color-stop(#d1830e), to(#a86602));
+  background-image: linear-gradient(to right, #a86602, #d1830e, #a86602);
+}
+
+#b1,
+#b2,
+#b3,
+#b4,
+#b5,
+#b6 {
+  width: 0px;
+  position: fixed;
+  background-color: #a86602;
+  -webkit-transform: rotate(215deg);
+          transform: rotate(215deg);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a86602), color-stop(#b16a00), to(#a86602));
+  background-image: linear-gradient(to right, #a86602, #b16a00, #a86602);
+}
+
+#g1,
+#g2,
+#g3,
+#g4,
+#g5,
+#g6 {
+  width: 0px;
+  height: 0px;
+  position: fixed;
+  background-color: #06ca17;
+  border-radius: 50%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#06ca17), to(#04880f));
+  background-image: linear-gradient(#06ca17, #04880f);
+}
+
+/*Keyframes for letter-by-letter animation*/
 @keyframes typist {
   0% {
     width: 0;
@@ -331,6 +388,7 @@ main {
   }
 }
 
+/*Different screen sizes ------------------------------------------------*/
 @media only screen and (min-width: 800px) {
   .slide__text--paragraph {
     font-size: 4vw;
@@ -339,26 +397,12 @@ main {
     font-size: 3vw;
   }
   #girl-smile {
-    top: 56%;
+    top: 62%;
   }
   #t1 {
     width: 175px;
-    height: 0px;
-    position: fixed;
-    background-color: #a86602;
     bottom: 5%;
     left: 45.5%;
-    background-image: -webkit-gradient(linear, left top, right top, from(#a86602), color-stop(#d1830e), to(#a86602));
-    background-image: linear-gradient(to right, #a86602, #d1830e, #a86602);
-  }
-  .t1 {
-    -webkit-animation: growT 3s linear forwards;
-            animation: growT 3s linear forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-  }
-  .treeGone {
-    display: none;
   }
   #b1,
   #b2,
@@ -366,18 +410,9 @@ main {
   #b4,
   #b5,
   #b6 {
-    width: 0px;
     height: 50px;
-    position: fixed;
-    background-color: #a86602;
     bottom: 33%;
     left: 46.5%;
-    -webkit-transform: rotate(215deg);
-            transform: rotate(215deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-    background-image: -webkit-gradient(linear, left top, right top, from(#a86602), color-stop(#b16a00), to(#a86602));
-    background-image: linear-gradient(to right, #a86602, #b16a00, #a86602);
   }
   .b1,
   .b2,
@@ -425,15 +460,8 @@ main {
   #g4,
   #g5,
   #g6 {
-    width: 0px;
-    height: 0px;
-    position: fixed;
-    background-color: #06ca17;
     bottom: 47%;
     left: 34%;
-    border-radius: 50%;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#06ca17), to(#04880f));
-    background-image: linear-gradient(#06ca17, #04880f);
   }
   #g2 {
     bottom: 47%;
@@ -584,24 +612,8 @@ main {
   }
   #t1 {
     width: 125px;
-    height: 0px;
-    position: fixed;
-    background-color: #a86602;
     bottom: 15%;
     left: 43%;
-    background-image: -webkit-gradient(linear, left top, right top, from(#a86602), color-stop(#d1830e), to(#a86602));
-    background-image: linear-gradient(to right, #a86602, #d1830e, #a86602);
-  }
-  .t1 {
-    -webkit-animation: growT 3s linear forwards;
-            animation: growT 3s linear forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-    -webkit-animation-delay: 1.5s;
-            animation-delay: 1.5s;
-  }
-  .treeGone {
-    display: none;
   }
   #b1,
   #b2,
@@ -609,18 +621,9 @@ main {
   #b4,
   #b5,
   #b6 {
-    width: 0px;
     height: 40px;
-    position: fixed;
-    background-color: #a86602;
     bottom: 40%;
     left: 45%;
-    -webkit-transform: rotate(215deg);
-            transform: rotate(215deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-    background-image: -webkit-gradient(linear, left top, right top, from(#a86602), color-stop(#b16a00), to(#a86602));
-    background-image: linear-gradient(to right, #a86602, #b16a00, #a86602);
   }
   .b1,
   .b2,
@@ -668,15 +671,8 @@ main {
   #g4,
   #g5,
   #g6 {
-    width: 0px;
-    height: 0px;
-    position: fixed;
-    background-color: #06ca17;
     bottom: 48%;
     left: 24.5%;
-    border-radius: 50%;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#06ca17), to(#04880f));
-    background-image: linear-gradient(#06ca17, #04880f);
   }
   #g2 {
     bottom: 48%;
@@ -818,6 +814,7 @@ main {
   }
 }
 
+/* Phone screen ----------------------------------------------------*/
 @media only screen and (max-width: 480px) {
   .slide__text--paragraph {
     font-size: 5vw;
@@ -830,24 +827,8 @@ main {
   }
   #t1 {
     width: 90px;
-    height: 0px;
-    position: fixed;
-    background-color: #a86602;
     bottom: 10%;
     left: 43%;
-    background-image: -webkit-gradient(linear, left top, right top, from(#a86602), color-stop(#d1830e), to(#a86602));
-    background-image: linear-gradient(to right, #a86602, #d1830e, #a86602);
-  }
-  .t1 {
-    -webkit-animation: growT 3s linear forwards;
-            animation: growT 3s linear forwards;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-    -webkit-animation-delay: 1.5s;
-            animation-delay: 1.5s;
-  }
-  .treeGone {
-    display: none;
   }
   #b1,
   #b2,
@@ -855,18 +836,9 @@ main {
   #b4,
   #b5,
   #b6 {
-    width: 0px;
     height: 30px;
-    position: fixed;
-    background-color: #a86602;
     bottom: 40%;
     left: 45.5%;
-    -webkit-transform: rotate(215deg);
-            transform: rotate(215deg);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-    background-image: -webkit-gradient(linear, left top, right top, from(#a86602), color-stop(#b16a00), to(#a86602));
-    background-image: linear-gradient(to right, #a86602, #b16a00, #a86602);
   }
   .b1,
   .b2,
@@ -914,15 +886,8 @@ main {
   #g4,
   #g5,
   #g6 {
-    width: 0px;
-    height: 0px;
-    position: fixed;
-    background-color: #06ca17;
     bottom: 45%;
     left: 21.5%;
-    border-radius: 50%;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#06ca17), to(#04880f));
-    background-image: linear-gradient(#06ca17, #04880f);
   }
   #g2 {
     bottom: 45%;

@@ -1,20 +1,35 @@
 # AdvancedCSS-Project
 
-# Group Yellowstone
+## Group Yellowstone
 
     Members & Github usernames:
     Magnus(Magnumoe), Håkon(Haakoasd), Adrian(Adriafh) & Cedric(CedricThode)
 
-# GENERAL INFO
+## GENERAL INFO
 
     This is a group project in IDG1293, Advanced CSS, assignment 2.
     The assignment is based on the designs created for assignment 1.
     The text we have chosen for our project is "Favorite Colour" by Joni Mitchell.
 
-    link to github page:
-    https://github.com/Magnumoe/AdvancedCSS-Project
+## Github page
 
-# TECHNICAL
+    link to github page:
+    [Magnumoe.github.io/AdvancedCSS-Project/](https://magnumoe.github.io/AdvancedCSS-Project/)
+
+## Visual
+
+```html
+<section class="slide" id="slide1" data-color="normal" data-animation="typist">
+  <div class="slide__text--container">
+    <p class="slide__text--paragraph">I met a child a year ago</p>
+  </div>
+  <a class="nextSection" href="#slide2"
+    ><i class="fas fa-angle-double-down visible"></i
+  ></a>
+</section>
+```
+
+## TECHNICAL
 
     Our solution for the project is based on Jquery & Scss.
     We use Jquery primarily for the flow and functionality of the website.

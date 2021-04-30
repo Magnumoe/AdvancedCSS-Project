@@ -45,12 +45,18 @@
         opacity: 1;
     }
 }
-//Letter by letter animation
+/*Keyframes for letter-by-letter animation*/
 @keyframes typist {
     0% {
         width: 0;
         opacity: 0;
     }
+
+    50% {
+        opacity: 1;
+        width: 0;
+    }
+
     100% {
         width: 100%;
         opacity: 1;

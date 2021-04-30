@@ -129,23 +129,7 @@ main {
     background-image: linear-gradient(rgb(6, 202, 23), rgb(4, 136, 15));
 }
 
-/*Keyframes for letter-by-letter animation*/
-@keyframes typist {
-    0% {
-        width: 0;
-        opacity: 0;
-    }
 
-    50% {
-        opacity: 1;
-        width: 0;
-    }
-
-    100% {
-        width: 100%;
-        opacity: 1;
-    }
-}
 
 
 /*Different screen sizes ------------------------------------------------*/

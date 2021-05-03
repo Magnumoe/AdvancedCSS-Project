@@ -32,11 +32,19 @@
     animation: fade 6s forwards;
 }
 
-#girl-image {
+.girl-image, .hand, .circles {
     z-index: -1;
     width: 15%;
     position: absolute;
     left: 50%;
+    transform: translateX(-50%);
+}
+
+.white-cane, .apple{
+    z-index: -1;
+    width: 15%;
+    position: absolute;
+    left: 60%;
     transform: translateX(-50%);
 }
 
@@ -62,47 +70,78 @@
     animation-delay: 3s;
 }
 
-@keyframes dash {
-    0% {
-        stroke-dashoffset: 10;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-    }
+//Progressbar
+.progress {
+    height: 10px;
+    width: 0%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: progress 1s linear;
+                /* Pause the animation */
+                animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
 }
 
-@keyframes zoomEffect {
-    0% {
-        width: 100%;
-        opacity: 1;
-    }
-
-    50% {
-        width: 50%;
-        opacity: 0;
-    }
-
-    100% {
-        width: 100%;
-        opacity: 1;
-    }
+.circles{
+    display: flex;
+    justify-content: space-around;
 }
 
-@keyframes fade {
-    0% {
-        opacity: 1;
-    }
+.circle{
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    border-radius: 30%;
+    animation: rotate360 4s linear infinite;
+}
 
-    20% {
-        opacity: 0;
-    }
+.redCircle{
+    background-color: $bright-red;
+}
+.blueCircle{
+    background-color: $bright-blue;
+}
+.purpleCircle{
+    background-color: $bright-purple;
+}
+.greenCircle{
+    background-color: $bright-green;
+}
 
-    70% {
-        opacity: 0;
-    }
+/*Heart animation*/
+#heart
+{
+  position: relative;
+  width: 100px;
+  height: 90px;
+  margin: auto;
+  animation: heartbeat 1s infinite;
+}
 
-    100% {
-        opacity: 1;
-    }
+#heart:before,
+#heart:after
+{
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: $bright-red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+#heart:after
+{
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
 }

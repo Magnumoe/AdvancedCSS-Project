@@ -14,6 +14,7 @@ main {
     scroll-snap-type: y mandatory;
 }
 
+/*Colors for backgrounds*/
 .color-black {
     background-color: $black;
     color: $white;
@@ -44,6 +45,11 @@ main {
     color: $brown;
 }
 
+.color-red{
+    background-color: rgb(245, 66, 66);
+}
+
+/*Letter-by-letter animation*/
 .animation-typist {
     animation: typist 2.5s steps(180) 1 normal;
     animation-fill-mode: both;
@@ -81,23 +87,56 @@ main {
     font-size: 2.4em;
 }
 
-@keyframes typist {
-    0% {
-        width: 0;
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-        width: 0;
-    }
-
-    100% {
-        width: 100%;
-        opacity: 1;
-    }
+/*Tree invisible on page load*/
+.treeGone {
+    display: none;
 }
 
+.t1 {
+    animation: growT 3s linear forwards;
+    animation-iteration-count: 1;
+    animation-delay: 1.5s;
+}
+
+#t1 {
+    height: 0px;
+    position: fixed;
+    background-color: rgb(168, 102, 2);
+    background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(209, 131, 14), rgb(168, 102, 2));
+}
+
+#b1,
+#b2,
+#b3,
+#b4,
+#b5,
+#b6 {
+    width: 0px;
+    position: fixed;
+    background-color: rgb(168, 102, 2);
+    transform: rotate(215deg);
+    transform-origin: left;
+    background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(177, 106, 0), rgb(168, 102, 2));
+}
+
+#g1,
+#g2,
+#g3,
+#g4,
+#g5,
+#g6 {
+    width: 0px;
+    height: 0px;
+    position: fixed;
+    background-color: rgb(6, 202, 23);
+    border-radius: 50%;
+    background-image: linear-gradient(rgb(6, 202, 23), rgb(4, 136, 15));
+}
+
+
+
+
+/*Different screen sizes ------------------------------------------------*/
 @media only screen and (min-width: 800px) {
     .slide__text--paragraph {
         font-size: 4vw;
@@ -106,25 +145,12 @@ main {
         font-size: 3vw;
     }
     #girl-smile {
-        top: 56%;
+        top: 62%;
     }
     #t1 {
         width: 175px;
-        height: 0px;
-        position: fixed;
-        background-color: rgb(168, 102, 2);
         bottom: 5%;
         left: 45.5%;
-        background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(209, 131, 14), rgb(168, 102, 2));
-    }
-
-    .t1 {
-        animation: growT 3s linear forwards;
-        animation-iteration-count: 1;
-    }
-
-    .treeGone {
-        display: none;
     }
 
     #b1,
@@ -133,15 +159,9 @@ main {
     #b4,
     #b5,
     #b6 {
-        width: 0px;
         height: 50px;
-        position: fixed;
-        background-color: rgb(168, 102, 2);
         bottom: 33%;
         left: 46.5%;
-        transform: rotate(215deg);
-        transform-origin: left;
-        background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(177, 106, 0), rgb(168, 102, 2));
     }
 
     .b1,
@@ -182,14 +202,8 @@ main {
     #g4,
     #g5,
     #g6 {
-        width: 0px;
-        height: 0px;
-        position: fixed;
-        background-color: rgb(6, 202, 23);
         bottom: 47%;
         left: 34%;
-        border-radius: 50%;
-        background-image: linear-gradient(rgb(6, 202, 23), rgb(4, 136, 15));
     }
 
     #g2 {
@@ -307,24 +321,14 @@ main {
         font-size: 4vw;
     }
 
+    #girl-smile {
+        top: 54%;
+    }
+
     #t1 {
         width: 125px;
-        height: 0px;
-        position: fixed;
-        background-color: rgb(168, 102, 2);
         bottom: 15%;
         left: 43%;
-        background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(209, 131, 14), rgb(168, 102, 2));
-    }
-
-    .t1 {
-        animation: growT 3s linear forwards;
-        animation-iteration-count: 1;
-        animation-delay: 1.5s;
-    }
-
-    .treeGone {
-        display: none;
     }
 
     #b1,
@@ -333,15 +337,9 @@ main {
     #b4,
     #b5,
     #b6 {
-        width: 0px;
         height: 40px;
-        position: fixed;
-        background-color: rgb(168, 102, 2);
         bottom: 40%;
         left: 45%;
-        transform: rotate(215deg);
-        transform-origin: left;
-        background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(177, 106, 0), rgb(168, 102, 2));
     }
 
     .b1,
@@ -382,14 +380,8 @@ main {
     #g4,
     #g5,
     #g6 {
-        width: 0px;
-        height: 0px;
-        position: fixed;
-        background-color: rgb(6, 202, 23);
         bottom: 48%;
         left: 24.5%;
-        border-radius: 50%;
-        background-image: linear-gradient(rgb(6, 202, 23), rgb(4, 136, 15));
     }
 
     #g2 {
@@ -497,7 +489,8 @@ main {
         }
     }
 }
-// Phone Screen
+
+/* Phone screen ----------------------------------------------------*/
 @media only screen and (max-width: 480px) {
     .slide__text--paragraph {
         font-size: 5vw;
@@ -510,22 +503,8 @@ main {
     }
     #t1 {
         width: 90px;
-        height: 0px;
-        position: fixed;
-        background-color: rgb(168, 102, 2);
         bottom: 10%;
         left: 43%;
-        background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(209, 131, 14), rgb(168, 102, 2));
-    }
-
-    .t1 {
-        animation: growT 3s linear forwards;
-        animation-iteration-count: 1;
-        animation-delay: 1.5s;
-    }
-
-    .treeGone {
-        display: none;
     }
 
     #b1,
@@ -534,15 +513,9 @@ main {
     #b4,
     #b5,
     #b6 {
-        width: 0px;
         height: 30px;
-        position: fixed;
-        background-color: rgb(168, 102, 2);
         bottom: 40%;
         left: 45.5%;
-        transform: rotate(215deg);
-        transform-origin: left;
-        background-image: linear-gradient(to right, rgb(168, 102, 2), rgb(177, 106, 0), rgb(168, 102, 2));
     }
 
     .b1,
@@ -583,14 +556,8 @@ main {
     #g4,
     #g5,
     #g6 {
-        width: 0px;
-        height: 0px;
-        position: fixed;
-        background-color: rgb(6, 202, 23);
         bottom: 45%;
         left: 21.5%;
-        border-radius: 50%;
-        background-image: linear-gradient(rgb(6, 202, 23), rgb(4, 136, 15));
     }
 
     #g2 {

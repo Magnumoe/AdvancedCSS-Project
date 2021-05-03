@@ -45,14 +45,145 @@
         opacity: 1;
     }
 }
-//Letter by letter animation
+/*Keyframes for letter-by-letter animation*/
 @keyframes typist {
     0% {
         width: 0;
         opacity: 0;
     }
+
+    50% {
+        opacity: 1;
+        width: 0;
+    }
+
     100% {
         width: 100%;
         opacity: 1;
     }
+}
+
+@keyframes progress {
+    0% {
+        background-color: rgb(0, 0, 0);
+        width: 0%;
+    }
+
+    5% {
+        background-color: rgb(0, 0, 0);
+    }
+
+    10% {
+        background-color: rgb(255, 255, 255);
+    }
+
+    15% {
+        background-color: #F95A7E
+    }
+
+    20% {
+        background-color: rgb(255, 255, 255);
+    }
+
+    25% {
+        background-color: #b0fd91;
+    }
+
+    30% {
+        background-color: rgb(255, 188, 112);
+    }
+
+    35% {
+        background-color: rgb(87, 111, 112);
+    }
+
+    40% {
+        background-color: rgb(157, 240, 255);
+    }
+
+    45% {
+        background-color: #d1d1d1;
+    }
+
+    50% {
+        background-color: rgb(0, 0, 0);
+    }
+
+    55% {
+        background-color: rgb(0, 0, 0);
+    }
+
+    60% {
+        background-color: rgb(0, 0, 0);
+    }
+
+    65% {
+        background-color: #533802;
+    }
+
+    70% {
+        background-color: rgb(255, 255, 255);
+    }
+
+    75% {
+        background-color: rgb(0, 0, 0);
+    }
+
+    80% {
+        background-color: rgb(0, 0, 0);
+    }
+
+    85% {
+        background-color: rgb(0, 0, 0);
+    }
+
+    90% {
+        background-color: rgb(0, 0, 0);
+    }
+
+    95% {
+        background-color: rgb(20, 255, 226);
+    }
+
+    100% {
+        background-color: rgb(116, 22, 119);
+        width: 100%;
+    }
+}
+
+@keyframes rotate360 {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+/*Heart keyframe*/
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75);
+  }
+  
+  20%
+  {
+    transform: scale( 1);
+  }
+  
+  40%
+  {
+    transform: scale( .75);
+  }
+  
+  60%
+  {
+    transform: scale( 1);
+  }
+  80% {
+    transform: scale( .75);
+  }
+  
+  100%
+  {
+    transform: scale( .75);
+  }
 }

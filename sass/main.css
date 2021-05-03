@@ -124,6 +124,218 @@
   }
 }
 
+@-webkit-keyframes progress {
+  0% {
+    background-color: black;
+    width: 0%;
+  }
+  5% {
+    background-color: black;
+  }
+  10% {
+    background-color: white;
+  }
+  15% {
+    background-color: #F95A7E;
+  }
+  20% {
+    background-color: white;
+  }
+  25% {
+    background-color: #b0fd91;
+  }
+  30% {
+    background-color: #ffbc70;
+  }
+  35% {
+    background-color: #576f70;
+  }
+  40% {
+    background-color: #9df0ff;
+  }
+  45% {
+    background-color: #d1d1d1;
+  }
+  50% {
+    background-color: black;
+  }
+  55% {
+    background-color: black;
+  }
+  60% {
+    background-color: black;
+  }
+  65% {
+    background-color: #533802;
+  }
+  70% {
+    background-color: white;
+  }
+  75% {
+    background-color: black;
+  }
+  80% {
+    background-color: black;
+  }
+  85% {
+    background-color: black;
+  }
+  90% {
+    background-color: black;
+  }
+  95% {
+    background-color: #14ffe2;
+  }
+  100% {
+    background-color: #741677;
+    width: 100%;
+  }
+}
+
+@keyframes progress {
+  0% {
+    background-color: black;
+    width: 0%;
+  }
+  5% {
+    background-color: black;
+  }
+  10% {
+    background-color: white;
+  }
+  15% {
+    background-color: #F95A7E;
+  }
+  20% {
+    background-color: white;
+  }
+  25% {
+    background-color: #b0fd91;
+  }
+  30% {
+    background-color: #ffbc70;
+  }
+  35% {
+    background-color: #576f70;
+  }
+  40% {
+    background-color: #9df0ff;
+  }
+  45% {
+    background-color: #d1d1d1;
+  }
+  50% {
+    background-color: black;
+  }
+  55% {
+    background-color: black;
+  }
+  60% {
+    background-color: black;
+  }
+  65% {
+    background-color: #533802;
+  }
+  70% {
+    background-color: white;
+  }
+  75% {
+    background-color: black;
+  }
+  80% {
+    background-color: black;
+  }
+  85% {
+    background-color: black;
+  }
+  90% {
+    background-color: black;
+  }
+  95% {
+    background-color: #14ffe2;
+  }
+  100% {
+    background-color: #741677;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes rotate360 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate360 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/*Heart keyframe*/
+@-webkit-keyframes heartbeat {
+  0% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  20% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+}
+@keyframes heartbeat {
+  0% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  20% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+}
+
 .slide {
   min-height: 100vh;
   display: -webkit-box;
@@ -158,11 +370,20 @@
           animation: fade 6s forwards;
 }
 
-#girl-image {
+.girl-image, .hand, .circles {
   z-index: -1;
   width: 15%;
   position: absolute;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.white-cane, .apple {
+  z-index: -1;
+  width: 15%;
+  position: absolute;
+  left: 60%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -190,6 +411,95 @@
           animation: dash 0.8s linear forwards;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
+}
+
+.progress {
+  height: 10px;
+  width: 0%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-animation: progress 1s linear;
+          animation: progress 1s linear;
+  /* Pause the animation */
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  /* Bind the animation to scroll */
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+  /* These last 2 properites clean up overshoot weirdness */
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.circles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.circle {
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+  border-radius: 30%;
+  -webkit-animation: rotate360 4s linear infinite;
+          animation: rotate360 4s linear infinite;
+}
+
+.redCircle {
+  background-color: #e93b3b;
+}
+
+.blueCircle {
+  background-color: #4d5dee;
+}
+
+.purpleCircle {
+  background-color: #9f40ca;
+}
+
+.greenCircle {
+  background-color: #2bbe0d;
+}
+
+/*Heart animation*/
+#heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  margin: auto;
+  -webkit-animation: heartbeat 1s infinite;
+          animation: heartbeat 1s infinite;
+}
+
+#heart:before,
+#heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: #e93b3b;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+}
+
+#heart:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
 }
 
 * {
@@ -243,6 +553,10 @@ main {
 .color-yellow-brown-gradient {
   background: #e5c37f;
   color: #4e3401;
+}
+
+.color-red {
+  background-color: #f54242;
 }
 
 /*Letter-by-letter animation*/
@@ -562,6 +876,9 @@ main {
   }
   .fa-angle-double-down {
     font-size: 4vw;
+  }
+  #girl-smile {
+    top: 54%;
   }
   #t1 {
     width: 125px;

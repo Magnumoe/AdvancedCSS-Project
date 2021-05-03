@@ -45,6 +45,10 @@ main {
     color: $brown;
 }
 
+.color-red{
+    background-color: rgb(245, 66, 66);
+}
+
 /*Letter-by-letter animation*/
 .animation-typist {
     animation: typist 2.5s steps(180) 1 normal;
@@ -315,6 +319,10 @@ main {
     }
     .fa-angle-double-down {
         font-size: 4vw;
+    }
+
+    #girl-smile {
+        top: 54%;
     }
 
     #t1 {

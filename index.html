@@ -17,122 +17,6 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     <script defer src='main.js'></script>
-    <style>
-        .progress {
-            height: 10px;
-            width: 0%;
-            background-color: #fff;
-            position: fixed;
-            top: 0;
-            left: 0;
-            animation: progress 1s linear;
-        }
-
-        @keyframes progress {
-            0% {
-                background-color: rgb(0, 0, 0);
-                width: 0%;
-            }
-
-            5% {
-                background-color: rgb(0, 0, 0);
-            }
-
-            10% {
-                background-color: rgb(255, 255, 255);
-            }
-
-            15% {
-                background-color: #F95A7E
-            }
-
-            20% {
-                background-color: rgb(255, 255, 255);
-            }
-
-            25% {
-                background-color: #b0fd91;
-            }
-
-            30% {
-                background-color: rgb(255, 188, 112);
-            }
-
-            35% {
-                background-color: rgb(87, 111, 112);
-            }
-
-            40% {
-                background-color: rgb(157, 240, 255);
-            }
-
-            45% {
-                background-color: #d1d1d1;
-            }
-
-            50% {
-                background-color: rgb(0, 0, 0);
-            }
-
-            55% {
-                background-color: rgb(0, 0, 0);
-            }
-
-            60% {
-                background-color: rgb(0, 0, 0);
-            }
-
-            65% {
-                background-color: #533802;
-            }
-
-            70% {
-                background-color: rgb(255, 255, 255);
-            }
-
-            75% {
-                background-color: rgb(0, 0, 0);
-            }
-
-            80% {
-                background-color: rgb(0, 0, 0);
-            }
-
-            85% {
-                background-color: rgb(0, 0, 0);
-            }
-
-            90% {
-                background-color: rgb(0, 0, 0);
-            }
-
-            95% {
-                background-color: rgb(20, 255, 226);
-            }
-
-            100% {
-                background-color: rgb(116, 22, 119);
-                width: 100%;
-            }
-        }
-
-        .progress {
-            /* Pause the animation */
-            animation-play-state: paused;
-            /* Bind the animation to scroll */
-            animation-delay: calc(var(--scroll) * -1s);
-            /* These last 2 properites clean up overshoot weirdness */
-            animation-iteration-count: 1;
-            animation-fill-mode: both;
-        }
-
-    </style>
-    <script>
-        window.addEventListener('scroll', () => {
-            document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight -
-                window.innerHeight));
-        }, false);
-    </script>
 </head>
 
 <body>
@@ -143,18 +27,27 @@
             <div class="slide__text--container">
                 <h1>Favorite Color</h1>
                 <h2>Joni Mitchell</h2>
+                <div class="circles">
+                    <div class="circle redCircle"></div>
+                    <div class="circle blueCircle"></div>
+                    <div class="circle purpleCircle"></div>
+                    <div class="circle greenCircle"></div>
+                </div>
             </div>
             <a class="nextSection" href="#slide1"><i class="fas fa-angle-double-down visible"></i></a>
         </section>
         <section class="slide" id="slide1" data-color="normal" data-animation="typist">
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">I met a child a year ago</p>
+                <img class="girl-image" src="./assets/images/girl-normal.png" alt="girl drawing">
             </div>
             <a class="nextSection" href="#slide2"><i class="fas fa-angle-double-down visible"></i></a>
         </section>
         <section class="slide" id="slide2" data-color="black" data-animation="typist">
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">Whose eyes would never see.</p>
+                <img class="girl-image" src="./assets/images/girl-normal.png" alt="girl drawing">
+                <img class="white-cane" id="white-cane" src="./assets/images/white-cane_1f9af.png" alt="white-cane">
             </div>
             <a class="nextSection" onclick="setSmileAnimation()" href="#slide3"><i
                     class="fas fa-angle-double-down"></i></a>
@@ -163,7 +56,7 @@
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">She asked me with a timid smile,</p>
 
-                <img id="girl-image" src="./assets/images/girl.png" alt="girl drawing">
+                <img class="girl-image" src="./assets/images/girl.png" alt="girl drawing">
                 <svg id="girl-smile" viewBox="0 0 43.8 11.4">
                     <path id="girl-smile__path" d="M18.4,4.7c0,0,1.1,1.7,3.6,1.7c2.1,0,3.4-1.7,3.4-1.7" />
                 </svg>
@@ -197,7 +90,7 @@
                 <p class="slide__text--paragraph">What colour is a tree?</p>
             </div>
 
-            <a class="nextSection" href="#slide5" onclick="treeGone()"><i class="fas fa-angle-double-down"></i></a>
+            <a class="nextSection" href="#slide5"><i class="fas fa-angle-double-down"></i></a>
         </section>
         <section class="slide" id="slide5" data-color="summer-green" data-animation="typist">
             <div class="slide__text--container">
@@ -215,7 +108,7 @@
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">In winter they are frosted white</p>
             </div>
-            <a class="nextSection" href="#slide8"><i class="fas fa-angle-double-down"></i></a>
+            <a class="nextSection" href="#slide8" onclick="treeGone()"><i class="fas fa-angle-double-down"></i></a>
         </section>
         <section class="slide" id="slide8" data-color="winter" data-animation="typist">
             <div class="slide__text--container">
@@ -235,7 +128,7 @@
             </div>
             <a class="nextSection" href="#slide11"><i class="fas fa-angle-double-down"></i></a>
         </section>
-        <section class="slide" id="slide11" data-color="normal" data-animation="typist">
+        <section class="slide" id="slide11" data-color="red" data-animation="typist">
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">And apples are the brightest red.</p>
             </div>
@@ -244,6 +137,12 @@
         <section class="slide" id="slide12" data-color="normal" data-animation="typist">
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">What colour is a man?"</p>
+                <div class="circles">
+                    <div class="circle redCircle"></div>
+                    <div class="circle blueCircle"></div>
+                    <div class="circle purpleCircle"></div>
+                    <div class="circle greenCircle"></div>
+                </div>
             </div>
             <a class="nextSection" href="#slide13" onclick="WhiteHandAnimation()"><i class="fas fa-angle-double-down"></i></a>
         </section>
@@ -251,11 +150,11 @@
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">"Man is many colours child:</p>
                 
-                <div id="float">
+                <div class="hand">
                     <img src="assets/images/handwhite.png" height="100px" width="100px">
                 </div>
 
-                <div id="apple">
+                <div class="apple">
                     <img src="assets/images/Small-Apple-Fruit-Vector-Transparent-PNG.png" height="100px" width="100px">
                 </div>
                 
@@ -267,11 +166,11 @@
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">Some are yellow, some are brown.</p>
 
-                <div id="float">
+                <div class="hand">
                     <img src="assets/images/HandMexican.png" height="100px" width="100px">
                 </div>
 
-                <div id="apple">
+                <div class="apple">
                     <img src="assets/images/Small-Apple-Fruit-Vector-Transparent-PNG.png" height="100px" width="100px">
                 </div>
 
@@ -282,11 +181,11 @@
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">And some are black as sightlessness,</p>
 
-                <div id="float">
+                <div class="hand">
                     <img src="assets/images/Handblack.png" height="100px" width="100px">
                 </div>
 
-                <div id="apple">
+                <div class="apple">
                     <img src="assets/images/Small-Apple-Fruit-Vector-Transparent-PNG.png" height="100px" width="100px">
                 </div>
 
@@ -297,10 +196,10 @@
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">Some white as eiderdowmn."</p>
 
-                <div id="float">
+                <div class="hand">
                     <img src="assets/images/HandBright.png" height="100px" width="100px">
                 </div>
-                <div id="apple">
+                <div class="apple">
                     <img src="assets/images/Small-Apple-Fruit-Vector-Transparent-PNG.png" height="100px" width="100px">
                 </div>
 
@@ -328,6 +227,7 @@
         <section class="slide" id="slide20" data-color="pastel-pink" data-animation="typist">
             <div class="slide__text--container">
                 <p class="slide__text--paragraph">Comes my favourite colour--love."</p>
+                <div id="heart"></div>
             </div>
         </section>
     </main>
